@@ -1,0 +1,1 @@
+crear documentacion sobre el plugin de alpine auto-animate

@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[x-cloak] {
+    display: none !important;
+}
+
+.animate-progress {
+    animation-name: progress;
+}
+
+@keyframes progress {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+.animation-duration-2s {
+    animation-duration: 2s;
+}
+
+.animation-duration-10s {
+    animation-duration: 10s;
+}
+
+.ce-block__content {
+
+    /* @apply prose; */
+    p,
+    ce-paragraph {
+        @apply tracking-wider text-xs text-gray-500;
+    }
+
+    h1 {
+        @apply leading-5 font-extrabold;
+    }
+
+    h2 {
+        @apply text-lg leading-5 font-bold;
+    }
+
+    h3 {
+        @apply text-xl leading-5 font-bold;
+    }
+
+    h4 {
+        @apply text-2xl leading-5 font-semibold;
+    }
+
+    h5 {
+        @apply text-3xl leading-5 font-semibold;
+    }
+
+    h6 {
+        @apply text-4xl leading-5 font-semibold;
+    }
+}

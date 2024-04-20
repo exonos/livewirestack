@@ -1,0 +1,60 @@
+{
+    "name": "exonos/livewirestack",
+    "description": "Livewire components for rapid development",
+    "keywords": [
+        "exonos",
+        "exonhos",
+        "Livewire",
+        "Livewire stack",
+        "Livewirestack",
+        "Livewire components",
+        "Tailwind",
+        "Alpine"
+    ],
+    "homepage": "https://github.com/exonos/livewirestack",
+    "type": "library",
+    "require": {
+        "php": "^8.1",
+        "laravel/framework": "^9.0 || ^10.0 || ^11.0"
+    },
+    "require-dev": {
+        "pestphp/pest": "^2.0",
+        "laravel/pint": "^1.13",
+        "orchestra/testbench": "^8.12",
+        "orchestra/testbench-dusk": "^8.12",
+        "pestphp/pest-plugin-type-coverage": "^2.2",
+        "larastan/larastan": "^2.7"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Exonos\\Livewirestack\\": "src/"
+        },
+        "files": ["helpers.php"]
+    },
+    "authors": [
+        {
+            "name": "Abdiel Hernandez",
+            "email": "hh.abdiel@gmail.com"
+        }
+    ],
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "@php artisan vendor:publish --tag={livewirestackScripts} --force"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Exonos\\Livewirestack\\LivewireStackServiceProvider"
+            ],
+            "aliases": []
+        }
+    },
+    "minimum-stability": "dev"
+}
