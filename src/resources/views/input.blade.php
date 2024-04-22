@@ -2,7 +2,7 @@
     <!-- STANDARD LABEL -->
     @if($label)
         <div class="flex mb-1 justify-between items-end">
-            <label class="block text-sm font-medium disabled:opacity-60 text-gray-700 dark:text-gray-700 invalidated:text-negative-600 dark:invalidated:text-negative-700">
+            <label class="block text-sm font-medium disabled:opacity-60 text-gray-700 dark:text-gray-400 invalidated:text-negative-600 dark:invalidated:text-negative-700">
                 {{ $label }}
             </label>
             @if($corner !== null)
@@ -24,7 +24,7 @@
                 (!$prepend && $append) ? 'rounded-l-lg border-r-0' : '',
                 ($prepend && $append) ? 'rounded-l-none border-r-0 rounded-r-none border-l-0' : '',
                 (!$prepend && !$append) ? 'rounded-lg' : '',
-                'flex bg-gray-50 items-center border border-gray-200 w-full focus-within:ring-1 focus-within:ring-blue-500 focus-within:border-blue-500 overflow-hidden dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white',
+                'flex bg-gray-50 items-center border border-gray-200 dark:border-gray-600 w-full focus-within:ring-1 focus-within:ring-blue-500 focus-within:border-blue-500 overflow-hidden dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white',
                 'border-dashed' => $attributes->has('readonly'),
                 'bg-red-50 border-red-500 text-red-900 placeholder-red-400 focus:ring-red-500 focus:border-red-500 dark:text-red-500 dark:placeholder-red-500 dark:border-red-500' => $errors->has($modelName()),
             ])}}
@@ -34,7 +34,7 @@
             @endif
             <input id="{{ $id }}"
                    placeholder="{{$placeholder}}"
-                   class="{{$getWidth()}} border-none outline-none border-transparent bg-transparent text-gray-900 block w-full focus:outline-none focus:ring-0 group-hover:border-gray-400"
+                   class="{{$getWidth()}} border-none outline-none border-transparent bg-transparent text-gray-900 dark:text-white block w-full focus:outline-none focus:ring-0 group-hover:border-gray-400 dark:group-hover:border-gray-600"
                     {{$attributes->merge(['type' => $type])}}
             />
                 @if($suffix)

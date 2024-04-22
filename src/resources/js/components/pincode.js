@@ -31,7 +31,6 @@ export default () => {
                 // only allow numbers
                 let key = event.key.replace(/\D/g, "");
                 if (key != "") {
-                    console.log(key);
                     this.input[index - 1] = key;
                 }
             }
@@ -55,13 +54,14 @@ export default () => {
             let el = document.querySelector(`input[name=pin${n}]`);
             el.focus();
         },
-        check() {
-            if (this.input.join("") == this.$wire.pin) {
+        async check() {
+            let success = await this.$wire.checkOTP(this.input.join(""));
+
+            if (success) {
                 feedback.innerHTML = "";
                 this.$wire.nextStep();
             } else {
-                feedback.innerHTML = "<span class='text-red-500 font-extrabold'>Codigo incorrecto!</span>";
-                this.reset(true);
+                feedback.innerHTML = "<span wire:ignore class='text-red-500 font-extrabold'>Codigo incorrecto!</span>";
             }
         }
     })

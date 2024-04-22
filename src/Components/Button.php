@@ -28,7 +28,7 @@ class Button extends Component
     {
         $default = 'border focus:ring-4 font-medium rounded-md focus:outline-none ';
         if ($this->attributes->has('primary')) {
-            return $default.'text-white bg-blue-700 hover:bg-blue-800 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800';
+            return $default.'text-white bg-blue-700 hover:bg-blue-800 border-transparent focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800';
         }
         if ($this->attributes->has('transparent')) {
             return 'text-gray-500 bg-transparent';

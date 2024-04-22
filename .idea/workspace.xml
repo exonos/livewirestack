@@ -5,80 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4e59d021-8b65-49f0-9b71-09f11b0a286d" name="Changes" comment="Init">
-      <change afterPath="$PROJECT_DIR$/helpers.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/intl-tel-input/build/css/demo.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/intl-tel-input/build/css/intlTelInput.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/intl-tel-input/build/css/intlTelInput.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/intl-tel-input/build/img/flags.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/intl-tel-input/build/img/flags@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/intl-tel-input/build/img/globe.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/intl-tel-input/build/img/globe@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/intl-tel-input/build/js/data.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/intl-tel-input/build/js/data.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/intl-tel-input/build/js/intlTelInput-jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/intl-tel-input/build/js/intlTelInput-jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/intl-tel-input/build/js/intlTelInput.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/intl-tel-input/build/js/intlTelInput.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/intl-tel-input/build/js/utils.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/intl-tel-input/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/NotificationBase.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Popover.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Tooltip.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/js/alpine/FloatingUI/buildConfigFromModifiers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/js/alpine/FloatingUI/buildDirectiveConfigFromModifiers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/js/alpine/FloatingUI/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/js/alpine/FloatingUI/randomString.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/js/tailwindcss/plugins/tinymce/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/views/popover.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/views/tooltip.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/livewirestack.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/livewirestack.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE.md" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/input.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/input.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/livewirestack.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/livewirestack.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/livewirestack.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/livewirestack.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Builder/Component.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Builder/Component.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Button.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Button.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Dropdown.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Dropdown.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Modal.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Modal.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Notification.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Notification.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Phone.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Phone.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LivewireStackServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/LivewireStackServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Traits/Builder/HasFormTrait.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Traits/Builder/HasFormTrait.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/css/livewirestack.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/css/livewirestack.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/js/alpine/directives/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/js/alpine/magic/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/js/alpine/magic/props.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/js/alpine/store/colorPicker.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/js/alpine/store/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/js/alpine/store/modal.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/js/components/pincode.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/js/components/pincode.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/js/components/rich-text.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/js/components/rich-text.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/js/components/toast-base.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/js/components/toast-base.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/js/helpers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/js/helpers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/js/livewirestack.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/js/livewirestack.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/js/plugins/customScrollbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/js/tailwindcss/plugins/customScrollbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/js/plugins/numberAppearanceNone.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/js/tailwindcss/plugins/numberAppearanceNone.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/js/plugins/softScrollbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/js/tailwindcss/plugins/softScrollbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/button.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/button.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/dropdown.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/dropdown.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/editor.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/editor.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/js/tailwindcss/plugins/customScrollbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/js/tailwindcss/plugins/customScrollbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/js/tailwindcss/plugins/softScrollbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/js/tailwindcss/plugins/softScrollbar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/views/input.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/input.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/modal.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/modal.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/notification.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/notification.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/phone.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/phone.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/ratio-labels.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/ratio-labels.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/select.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/select.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/toggle.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/toggle.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -270,7 +206,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "master",
     "last_opened_file_path": "/Users/exonhos/PhpstormProjects/livewirestack/src/resources/views",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -365,7 +301,7 @@
       <workItem from="1713203917401" duration="3421000" />
       <workItem from="1713479750128" duration="7439000" />
       <workItem from="1713548836967" duration="9367000" />
-      <workItem from="1713626593027" duration="4456000" />
+      <workItem from="1713626593027" duration="13538000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <option name="closed" value="true" />

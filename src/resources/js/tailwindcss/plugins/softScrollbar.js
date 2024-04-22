@@ -1,4 +1,4 @@
-import plugin from 'tailwindcss/plugin';
+const plugin = require('tailwindcss/plugin')
 
 module.exports = plugin(function({addUtilities}) {
     const utility = {

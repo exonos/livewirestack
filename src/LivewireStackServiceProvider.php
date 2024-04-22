@@ -24,6 +24,11 @@ class LivewireStackServiceProvider extends ServiceProvider
             __DIR__.'/../public/livewirestack.css' => public_path('vendor/livewirestack/livewirestack.css'),
             __DIR__.'/../public/livewirestack.js' => public_path('vendor/livewirestack/livewirestack.js'),
         ], ['laravel-assets']);
+
+        $this->publishes([
+            __DIR__.'/Components/Input.php' => app_path('/View/Components'),
+            __DIR__.'/resources/views/input.blade.php' => resource_path('/views/components'),
+        ], ['input-component']);
     }
 
     public function registerConfig(): void
