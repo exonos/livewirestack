@@ -56,7 +56,7 @@ class Modal extends Component
         {
             return '$wire.entangle("'.$this->attributes->whereStartsWith('wire:model')->first().'")';
         }else{
-            return $this->attributes->has('show') ? $this->attributes->whereStartsWith('show')->first() : false;
+            return $this->attributes->has('show') ? $this->attributes->whereStartsWith('show')->first() : 'false';
         }
     }
     public function render(): View|Closure|string
