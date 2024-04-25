@@ -30,7 +30,7 @@
                 placeholder="{{$placeholder}}"
                 class="{{$getWidth()}} border-none outline-none border-transparent bg-transparent text-gray-900 block w-full focus:outline-none focus:ring-0 group-hover:border-gray-400"
                 type="tel"
-                x-on:change="value = iti.getSelectedCountryData('dialCode')+input.getNumber(intlTelInputUtils.numberFormat.E164);"
+                x-on:change="value = input.getSelectedCountryData('dialCode')+input.getNumber(intlTelInputUtils.numberFormat.E164);"
         />
     </div>
     <!-- ERROR -->
