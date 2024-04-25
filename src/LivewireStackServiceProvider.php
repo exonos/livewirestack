@@ -58,12 +58,12 @@ class LivewireStackServiceProvider extends ServiceProvider
     {
         Blade::directive('livewirestackScripts', function () {
             return '<script src="' . asset('vendor/livewirestack/livewirestack.js') . '"></script>'.
-                '<?php echo $__env->yieldPushContent("livewirestack-scripts"); ?>';
+                '<?php echo $__env->yieldPushContent("livewirestack-scripts"); ?>'.
+                '<?php echo $__env->yieldPushContent("livewirestack-styles"); ?>';
         });
 
         Blade::directive('livewirestackStyles', function () {
-            return '<link rel="stylesheet" type="text/css" href="' . asset('vendor/livewirestack/livewirestack.css') . '">'.
-                '<?php echo $__env->yieldPushContent("livewirestack-styles"); ?>';
+            return '<link rel="stylesheet" type="text/css" href="' . asset('vendor/livewirestack/livewirestack.css') . '">';
         });
     }
 }
