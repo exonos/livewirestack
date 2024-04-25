@@ -1,8 +1,8 @@
-@push('livewirestack-styles')
+@push('styles')
     <link rel="stylesheet" href="/intl-tel-input/build/css/intlTelInput.css">
 @endpush
 
-@push('livewirestack-scripts')
+@push('scripts')
     <script src="/intl-tel-input/build/js/intlTelInput.min.js"></script>
 @endpush
 
