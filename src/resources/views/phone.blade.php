@@ -15,7 +15,7 @@
         <input
                 x-data="{ value: @entangle($attributes->wire('model')), input: null}"
                 x-ref="input"
-                x-init="input = window.intlTelInput($refs.input, {
+                x-init="input = intlTelInput($refs.input, {
                 showSelectedDialCode: true,
                   initialCountry: 'mx',
                   autoInsertDialCode: true,
