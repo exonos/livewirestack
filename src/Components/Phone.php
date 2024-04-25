@@ -12,9 +12,9 @@ class Phone extends Component
     {
         if ($this->attributes->has('wire:model'))
         {
-            return '$wire.entangle('.$this->attributes->whereStartsWith('wire:model')->first().')';
+            return '$wire.entangle("'.$this->attributes->whereStartsWith('wire:model')->first().'")';
         }else{
-            return '';
+            return null;
         }
     }
     public function render(): View|Closure|string
