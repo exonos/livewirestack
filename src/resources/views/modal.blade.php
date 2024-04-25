@@ -2,6 +2,7 @@
     x-data="{show: {{$entangleable()}}}"
     x-on:close.stop="show = false"
     x-on:keydown.escape.window="show = false"
+    x-on:open-modal.window="$event.detail == '{{ $modelName() }}' ? show = true : null"
     x-show="show"
     class="fixed inset-0 z-10 overflow-y-auto"
     style="display: none;"

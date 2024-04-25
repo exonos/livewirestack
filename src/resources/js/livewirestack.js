@@ -10,7 +10,6 @@ import lottie from 'lottie-web'
 import './globals/globals';
 import './components/rich-text';
 import AlpineFloatingUI from "./alpine/FloatingUI/index";
-import '../../../public/intl-tel-input/index'
 
 document.addEventListener('alpine:init', () => {
     window.Alpine.data('ui_select', select);

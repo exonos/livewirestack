@@ -46,3 +46,12 @@
     @endif
 </div>
 
+@push('livewirestack-styles')
+    <link rel="stylesheet" href="/intl-tel-input/build/css/intlTelInput.css">
+@endpush
+
+@push('livewirestack-scripts')
+    <script src="/intl-tel-input/build/js/intlTelInput.min.js"></script>
+@endpush
+
+

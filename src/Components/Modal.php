@@ -12,6 +12,7 @@ class Modal extends Component
 
     public function __construct(
         public ?string $id = null,
+        public ?bool $show = false,
         public string|null|ComponentSlot $trigger = null,
         public string|null|ComponentSlot $content = null,
         public string $size = 'lg',
@@ -56,7 +57,7 @@ class Modal extends Component
         {
             return '$wire.entangle("'.$this->attributes->whereStartsWith('wire:model')->first().'")';
         }else{
-            return 'false';
+            return $this->attributes->whereStartsWith('show')->first();
         }
     }
     public function render(): View|Closure|string
