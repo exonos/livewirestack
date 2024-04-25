@@ -15,22 +15,22 @@
                 x-ref="input"
                 x-init="input = window.intlTelInput($refs.input, {
                 showSelectedDialCode: true,
-                  initialCountry: 'mx',
-                  autoInsertDialCode: true,
-                  containerClass: 'w-full',
-                  useFullscreenPopup: true,
-                  geoIpLookup: function(callback) {
-                    fetch('https://ipapi.co/json')
-                        .then(function(res) { return res.json(); })
-                        .then(function(data) { callback(data.country_code); })
-                        .catch(function() { callback(); });
-                    },
-                    utilsScript: '/intl-tel-input/build/js/utils.js',
-                  })"
+                initialCountry: 'mx',
+                autoInsertDialCode: true,
+                containerClass: 'w-full',
+                useFullscreenPopup: true,
+                geoIpLookup: function(callback) {
+                  fetch('https://ipapi.co/json')
+                     .then(function(res) { return res.json(); })
+                     .then(function(data) { callback(data.country_code); })
+                     .catch(function() { callback(); });
+                  },
+                  utilsScript: '/intl-tel-input/build/js/utils.js',
+                })"
                 placeholder="{{$placeholder}}"
                 class="{{$getWidth()}} border-none outline-none border-transparent bg-transparent text-gray-900 block w-full focus:outline-none focus:ring-0 group-hover:border-gray-400"
                 type="tel"
-                x-on:change="value = input.getNumber(intlTelInputUtils.numberFormat.E164);"
+                x-on:change="value = iti.getSelectedCountryData('dialCode')+input.getNumber(intlTelInputUtils.numberFormat.E164);"
         />
     </div>
     <!-- ERROR -->
