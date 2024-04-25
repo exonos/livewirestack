@@ -1,11 +1,3 @@
-@push('styles')
-    <link rel="stylesheet" href="/intl-tel-input/build/css/intlTelInput.css">
-@endpush
-
-@push('scripts')
-    <script src="/intl-tel-input/build/js/intlTelInput.min.js"></script>
-@endpush
-
 <div>
     <!-- STANDARD LABEL -->
     @if($label)
