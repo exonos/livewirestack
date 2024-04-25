@@ -1,6 +1,12 @@
-<div>
+@push('livewirestack-styles')
     <link rel="stylesheet" href="/intl-tel-input/build/css/intlTelInput.css">
+@endpush
+
+@push('livewirestack-scripts')
     <script src="/intl-tel-input/build/js/intlTelInput.min.js"></script>
+@endpush
+
+<div>
     <!-- STANDARD LABEL -->
     @if($label)
         <label class="block text-sm mb-1 font-medium text-gray-900 dark:text-white" for="{{ $id }}">
@@ -15,7 +21,7 @@
         <input
                 x-data="{ value: @entangle($attributes->wire('model')), input: null}"
                 x-ref="input"
-                x-init="input = intlTelInput($refs.input, {
+                x-init="input = window.intlTelInput($refs.input, {
                 showSelectedDialCode: true,
                   initialCountry: 'mx',
                   autoInsertDialCode: true,
@@ -47,13 +53,4 @@
         </p>
     @endif
 </div>
-
-@push('livewirestack-styles')
-    <link rel="stylesheet" href="/intl-tel-input/build/css/intlTelInput.css">
-@endpush
-
-@push('livewirestack-scripts')
-    <script src="/intl-tel-input/build/js/intlTelInput.min.js"></script>
-@endpush
-
 
