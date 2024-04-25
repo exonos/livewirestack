@@ -12,7 +12,6 @@ class Modal extends Component
 
     public function __construct(
         public ?string $id = null,
-        public ?bool $show = false,
         public string|null|ComponentSlot $trigger = null,
         public string|null|ComponentSlot $content = null,
         public string $size = 'lg',
