@@ -11,7 +11,7 @@
                 'bg-red-50 border-red-500 text-red-900 placeholder-red-400 focus:ring-red-500 focus:border-red-500 dark:text-red-500 dark:placeholder-red-500 dark:border-red-500' => $errors->has($modelName()),
             ])}}>
         <input
-                x-data="{ value: @entangle($attributes->wire('model')), input: null}"
+                x-data="{ value: {{$entangleable()}}, input: null}"
                 x-ref="input"
                 x-init="input = window.intlTelInput($refs.input, {
                 showSelectedDialCode: true,

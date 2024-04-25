@@ -8,6 +8,15 @@ use Illuminate\Contracts\View\View;
 
 class Phone extends Component
 {
+    public function entangleable(): ?string
+    {
+        if ($this->attributes->has('wire:model'))
+        {
+            return '$wire.entangle("'.$this->attributes->whereStartsWith('wire:model')->first().'")';
+        }else{
+            return '';
+        }
+    }
     public function render(): View|Closure|string
     {
         return view('livewirestack::phone');
