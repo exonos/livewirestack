@@ -1,10 +1,10 @@
-export default () => {
+export default (length = 4, onlyCheckOnLastFieldInput = true) => {
     return window.Alpine.reactive({
-        length: 4,
+        length: length,
         input: [],
         // this will only check when inputing the last number
         // usefull if you're going to limit number of checks
-        onlyCheckOnLastFieldInput: true,
+        onlyCheckOnLastFieldInput: onlyCheckOnLastFieldInput,
         paste(event) {
             // raw pasted input
             let pasted = event.clipboardData.getData("text");

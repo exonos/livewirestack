@@ -6,18 +6,19 @@
         </label>
     @endif
     <div {{$attributes->class([
-                'flex bg-gray-50 items-center border rounded-md my-2 border-gray-200 w-full focus-within:ring-1 focus-within:ring-blue-500 focus-within:border-blue-500 overflow-hidden dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white',
+                'flex bg-gray-50 items-center dark:border-gray-700 border rounded-md my-2 border-gray-200 w-full focus-within:ring-1 focus-within:ring-blue-500 focus-within:border-blue-500 overflow-hidden dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white',
                 'border-dashed' => $attributes->has('readonly'),
                 'bg-red-50 border-red-500 text-red-900 placeholder-red-400 focus:ring-red-500 focus:border-red-500 dark:text-red-500 dark:placeholder-red-500 dark:border-red-500' => $errors->has($modelName()),
             ])}}>
         <input
-                x-data="{ value: '{{$entangleable() ?? null}}', input: null}"
+                x-data="{ value: null, input: null}"
                 x-ref="input"
                 x-init="input = window.intlTelInput($refs.input, {
                 showSelectedDialCode: true,
                 initialCountry: 'mx',
                 autoInsertDialCode: true,
                 containerClass: 'w-full',
+                countrySearch: false,
                 useFullscreenPopup: true,
                 geoIpLookup: function(callback) {
                   fetch('https://ipapi.co/json')
@@ -26,11 +27,14 @@
                      .catch(function() { callback(); });
                   },
                   utilsScript: '/intl-tel-input/build/js/utils.js',
-                })"
+                });
+                $refs.input.addEventListener('change', () => {
+                    @this.set('{{$modelName}}', input.getNumber(intlTelInputUtils.numberFormat.E164));
+                });
+               "
                 placeholder="{{$placeholder}}"
-                class="{{$getWidth()}} border-none outline-none border-transparent bg-transparent text-gray-900 block w-full focus:outline-none focus:ring-0 group-hover:border-gray-400"
+                class="{{$getWidth()}} border-none outline-none dark:text-white border-transparent bg-transparent text-gray-900 block w-full focus:outline-none focus:ring-0 group-hover:border-gray-400"
                 type="tel"
-                x-on:change="value = input.getSelectedCountryData('dialCode')+input.getNumber(intlTelInputUtils.numberFormat.E164);"
         />
     </div>
     <!-- ERROR -->
