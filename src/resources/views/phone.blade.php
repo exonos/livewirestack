@@ -29,7 +29,10 @@
                   utilsScript: '/intl-tel-input/build/js/utils.js',
                 });
                 $refs.input.addEventListener('change', () => {
-                    @this.set('{{$modelName}}', input.getNumber(intlTelInputUtils.numberFormat.E164));
+                if(input.isValidNumber()){
+                    @this.set('{{$modelName}}', $refs.input.value.replace(/\s/g, ''));
+                    @this.set('country', input.getSelectedCountryData());
+                   }
                 });
                "
                 placeholder="{{$placeholder}}"

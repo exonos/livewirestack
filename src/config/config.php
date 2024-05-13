@@ -15,6 +15,7 @@ use Exonos\Livewirestack\Components\Password;
 use Exonos\Livewirestack\Components\Phone;
 use Exonos\Livewirestack\Components\RatioLabel;
 use Exonos\Livewirestack\Components\Select;
+use Exonos\Livewirestack\Components\Sideover;
 use Exonos\Livewirestack\Components\Tags;
 use Exonos\Livewirestack\Components\Textarea;
 use Exonos\Livewirestack\Components\Toggle;
@@ -75,5 +76,6 @@ return [
         'popover' => Popover::class,
         'tooltip' => Tooltip::class,
         'notification' => NotificationBase::class,
+        'sideover' => Sideover::class,
     ],
 ];
