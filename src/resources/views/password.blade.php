@@ -1,15 +1,12 @@
 <div>
     @if($label)
-        <label class="block text-sm font-medium text-gray-900 dark:text-white" for="password">
-            {{ $label }}
-            @if($hint)
-                <p class="block mb-1 text-gray-400 text-xs">
-                    {{ $hint }}
-                </p>
-            @endif
-        </label>
+        <div class="flex mb-1 justify-between items-end">
+            <label class="block font-normal dark:text-white text-xs text-gray-600" for="">
+                {{ $label }}
+            </label>
+        </div>
     @endif
-    <div class="relative mt-1 rounded-md" x-data="{ show : false }">
+    <div class="mt-1 rounded-md" x-data="{ show : false }">
         <div class="absolute inset-y-0 right-0 flex items-center pr-2.5">
             <div class="cursor-pointer" x-on:click="show = !show">
                 <svg class="h-5 w-5 text-gray-400" x-show="!show" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="display: none;">
@@ -41,4 +38,10 @@
     @error($modelName())
     <p class="mt-1 text-sm text-red-600 dark:text-red-500"><span class="font-medium">Oh, snapp!</span> {{ $message }}</p>
     @enderror
+
+        @if($hint)
+            <p class="block mt-0.5 text-gray-500 font-extralight italic text-xs">
+                {{ $hint }}
+            </p>
+        @endif
 </div>
