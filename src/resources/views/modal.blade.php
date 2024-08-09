@@ -5,7 +5,7 @@
     x-on:open-modal.window="$event.detail == '{{ $modelName() }}' ? show = true : null"
     x-on:close-modal.window="$event.detail == '{{ $modelName() }}' ? show = false : null"
     x-show="show"
-    class="fixed inset-0 z-10 overflow-y-auto"
+    class="fixed inset-0 z-50 overflow-y-auto"
     style="display: none;"
 >
     @if(isset($trigger))
@@ -23,7 +23,7 @@
             x-transition:leave-end="opacity-0"
             class="fixed inset-0 transition-all transform"
         >
-            <div class="absolute inset-0 backdrop-blur-sm bg-black/30"></div>
+            <div class="absolute inset-0 backdrop-blur-sm bg-black bg-opacity-10"></div>
         </div>
 
         <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>

@@ -60,3 +60,116 @@
         @apply text-4xl leading-5 font-semibold;
     }
 }
+.livewirestack-modal {
+    @apply relative z-40;
+}
+
+.livewirestack-modal-container {
+    @apply fixed z-10 inset-0 overflow-y-auto;
+}
+
+.livewirestack-modal-inner-container {
+    @apply flex items-end sm:items-center justify-center min-h-full text-center;
+}
+
+.livewirestack-modal-backdrop,
+.livewirestack-slide-over-backdrop {
+    @apply fixed inset-0 bg-opacity-25 bg-gray-500 backdrop-blur transition-opacity;
+}
+
+.livewirestack-modal-content {
+    @apply relative bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all w-full m-4 sm:m-0;
+}
+
+.livewirestack-modal-content > div {
+    @apply h-full;
+}
+
+.livewirestack-modal-content.fullscreen {
+    @apply h-screen rounded-none shadow-none w-full m-0;
+}
+
+.livewirestack-modal-backdrop.enter,
+.livewirestack-slide-over-backdrop.enter {
+    @apply ease-out duration-300;
+}
+
+.livewirestack-modal-backdrop.start,
+.livewirestack-modal-backdrop.leave.end,
+.livewirestack-slide-over-backdrop.start,
+.livewirestack-slide-over-backdrop.leave.end {
+    @apply opacity-0;
+}
+
+.livewirestack-modal-backdrop.end,
+.livewirestack-modal-backdrop.leave.start,
+.livewirestack-slide-over-backdrop.end,
+.livewirestack-slide-over-backdrop.leave.start {
+    @apply opacity-100;
+}
+
+.livewirestack-modal-backdrop.leave,
+.livewirestack-slide-over-backdrop.leave {
+    @apply ease-in duration-200;
+}
+
+.livewirestack-modal-content.enter {
+    @apply ease-out duration-300;
+}
+
+.livewirestack-modal-content.start,
+.livewirestack-modal-content.leave.end {
+    @apply opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95;
+}
+
+.livewirestack-modal-content.end,
+.livewirestack-modal-content.leave.start {
+    @apply opacity-100 translate-y-0 sm:scale-100;
+}
+
+.livewirestack-modal-content.leave {
+    @apply ease-in duration-200;
+}
+
+.livewirestack-slide-over {
+    @apply fixed inset-0 overflow-hidden z-30;
+}
+
+.livewirestack-slide-over.livewirestack-slide-over-top {
+    @apply z-40;
+}
+
+.livewirestack-slide-over-container-backdrop {
+    @apply absolute inset-0;
+}
+
+.livewirestack-slide-over-container {
+    @apply absolute inset-0 overflow-hidden;
+}
+
+.livewirestack-slide-over-container-inner {
+    @apply pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10;
+}
+
+.livewirestack-slide-over-container-inner-wrap {
+    @apply pointer-events-auto w-screen;
+}
+
+.livewirestack-slide-over-container-inner-wrap.enter,
+.livewirestack-slide-over-container-inner-wrap.leave {
+    @apply transform transition ease-in-out duration-500;
+}
+
+.livewirestack-slide-over-container-inner-wrap.enter.start,
+.livewirestack-slide-over-container-inner-wrap.leave.end {
+    @apply translate-x-full;
+}
+
+.livewirestack-slide-over-container-inner-wrap.enter.end,
+.livewirestack-slide-over-container-inner-wrap.leave.start {
+    @apply translate-x-0;
+}
+
+.livewirestack-slide-over-container-inner-content {
+    @apply flex h-full flex-col overflow-y-scroll bg-white py-6 shadow-xl;
+}

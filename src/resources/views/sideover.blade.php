@@ -11,7 +11,7 @@
                 x-show="slideOverOpen"
                 @keydown.window.escape="slideOverOpen=false"
                 class="relative z-[99]">
-            <div x-show="slideOverOpen" x-transition.opacity.duration.600ms @click="slideOverOpen = false" class="fixed inset-0 bg-black bg-opacity-10"></div>
+            <div x-show="slideOverOpen" x-transition.opacity.duration.600ms @click="slideOverOpen = false" class="fixed inset-0 backdrop-blur-sm bg-black bg-opacity-10"></div>
             <div class="fixed inset-0 overflow-hidden">
                 <div class="absolute inset-0 overflow-hidden">
                     <div class="fixed inset-y-0 right-0 flex max-w-full">
@@ -30,6 +30,7 @@
                                 x-transition:leave-end="translate-x-full"
                                 class="w-screen {{$size}}">
                             <div class="flex flex-col h-full py-5 overflow-y-scroll bg-white border-l shadow-lg border-neutral-100/70">
+                                @if($fixed() === 'true')
                                 <div class="px-4 sm:px-5">
                                     <div class="flex items-start justify-between pb-1">
                                         <h2 class="text-base font-semibold leading-6 text-gray-900" x-text="title"></h2>
@@ -41,6 +42,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                @endif
                                 <div class="relative flex-1 @if($fixed() === 'true') px-4 mt-5 sm:px-5 @endif">
                                     {{$content ??  $slot}}
                                 </div>

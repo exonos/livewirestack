@@ -20,6 +20,7 @@ use Exonos\Livewirestack\Components\Tags;
 use Exonos\Livewirestack\Components\Textarea;
 use Exonos\Livewirestack\Components\Toggle;
 use Exonos\Livewirestack\Components\Tooltip;
+use Exonos\Livewirestack\Components\Trix;
 use Exonos\Livewirestack\Components\Wizard;
 use Exonos\Livewirestack\Components\Popover;
 
@@ -45,6 +46,85 @@ return [
     |
     */
     'prefix' => null,
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | Livewire components
+    |--------------------------------------------------------------------------
+    | Control the livewire components.
+    |
+    */
+
+    'livewire' => [
+        'components' => [
+            'modal' => [
+                'view' => 'livewirestack::livewire.modal',
+                'placeholder' => 'livewirestack::placeholder',
+                'property-resolvers' => [
+                    \Exonos\Livewirestack\Resolvers\EnumPropertyResolver::class,
+                ],
+                'default-behavior' => [
+                    'close-on-escape' => true,
+                    'close-on-backdrop-click' => true,
+                    'trap-focus' => true,
+                    'remove-state-on-close' => false,
+                ],
+                'default-attributes' => [
+                    'size' => 'lg',
+                ],
+            ],
+            'slide-over' => [
+                'view' => 'livewirestack::livewire.slideover',
+                'placeholder' => 'livewirestack::placeholder',
+                'property-resolvers' => [
+                    \Exonos\Livewirestack\Resolvers\EnumPropertyResolver::class,
+                ],
+                'default-behavior' => [
+                    'close-on-escape' => true,
+                    'close-on-backdrop-click' => true,
+                    'trap-focus' => true,
+                    'remove-state-on-close' => false,
+                ],
+                'default-attributes' => [
+                    'size' => 'md',
+                ],
+            ]
+        ],
+        'presets' => [
+            'modal' => [
+                'size-map' => [
+                    'xs' => 'max-w-xs',
+                    'sm' => 'max-w-sm',
+                    'md' => 'max-w-md',
+                    'lg' => 'max-w-lg',
+                    'xl' => 'max-w-xl',
+                    '2xl' => 'max-w-2xl',
+                    '3xl' => 'max-w-3xl',
+                    '4xl' => 'max-w-4xl',
+                    '5xl' => 'max-w-5xl',
+                    '6xl' => 'max-w-6xl',
+                    '7xl' => 'max-w-7xl',
+                    'fullscreen' => 'fullscreen',
+                ],
+            ],
+            'slide-over' => [
+                'size-map' => [
+                    'xs' => 'max-w-xs',
+                    'sm' => 'max-w-sm',
+                    'md' => 'max-w-md',
+                    'lg' => 'max-w-lg',
+                    'xl' => 'max-w-xl',
+                    '2xl' => 'max-w-2xl',
+                    '3xl' => 'max-w-3xl',
+                    '4xl' => 'max-w-4xl',
+                    '5xl' => 'max-w-5xl',
+                    '6xl' => 'max-w-6xl',
+                    '7xl' => 'max-w-7xl',
+                ],
+            ],
+        ]
+    ],
 
 
     /*
@@ -77,5 +157,6 @@ return [
         'tooltip' => Tooltip::class,
         'notification' => NotificationBase::class,
         'sideover' => Sideover::class,
+        'trix' => Trix::class,
     ],
 ];

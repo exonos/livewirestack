@@ -1,8 +1,8 @@
 <?php
-namespace Exonos\LivewireStack;
+namespace Exonos\Livewirestack;
 
 use App\Extensions\Forms\Components\TextInput;
-use Exonos\Livewirestack\Components\Input;
+use Exonos\Livewirestack\Foundation\Modal;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 use Livewire\Livewire;
@@ -17,6 +17,7 @@ class LivewireStackServiceProvider extends ServiceProvider
         $this->registerConfig();
         $this->registerComponents();
         $this->registerDirectives();
+        $this->registerLivewireComponents();
 
 
         $this->publishes([
@@ -65,5 +66,10 @@ class LivewireStackServiceProvider extends ServiceProvider
         Blade::directive('livewirestackStyles', function () {
             return '<link rel="stylesheet" type="text/css" href="' . asset('vendor/livewirestack/livewirestack.css') . '">';
         });
+    }
+
+    protected function registerLivewireComponents()
+    {
+        Livewire::component('modal', Modal::class);
     }
 }

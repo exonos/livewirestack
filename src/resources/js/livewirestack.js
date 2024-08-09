@@ -4,6 +4,7 @@ import tags from './components/tags';
 import toastBase from './components/toast-base.js';
 import toastLoop from './components/toast-loop.js';
 import number from './components/number';
+import './components/overlay';
 import pincode from './components/pincode.js';
 import { create } from '@lottiefiles/lottie-interactivity';
 import lottie from 'lottie-web'
@@ -20,6 +21,7 @@ document.addEventListener('alpine:init', () => {
     window.Alpine.data('toast_loop', toastLoop);
     window.Alpine.data('ui_pincode', pincode);
     window.Alpine.data('lottie', lottie);
+    window.Alpine.data('create', create);
     window.Alpine.data('create', create);
     window.Alpine.plugin(AlpineFloatingUI);
     window.lottie = lottie
