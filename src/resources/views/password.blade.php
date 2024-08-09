@@ -6,7 +6,7 @@
             </label>
         </div>
     @endif
-    <div class="mt-1 rounded-md" x-data="{ show : false }">
+    <div class="relative mt-1 rounded-md" x-data="{ show : false }">
         <div class="absolute inset-y-0 right-0 flex items-center pr-2.5">
             <div class="cursor-pointer" x-on:click="show = !show">
                 <svg class="h-5 w-5 text-gray-400" x-show="!show" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="display: none;">
@@ -36,7 +36,7 @@
     </div>
     <!-- ERROR -->
     @error($modelName())
-    <p class="mt-1 text-sm text-red-600 dark:text-red-500"><span class="font-medium">Oh, snapp!</span> {{ $message }}</p>
+    <p class="mt-1 text-sm text-red-600 dark:text-red-500">{{ $message }}</p>
     @enderror
 
         @if($hint)

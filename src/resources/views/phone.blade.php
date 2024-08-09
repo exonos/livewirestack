@@ -42,7 +42,7 @@
     </div>
     <!-- ERROR -->
     @error($modelName())
-    <p class="mt-1 text-sm text-red-600 dark:text-red-500"><span class="font-medium">Oh, snap!</span> {{ $message }}</p>
+    <p class="mt-1 text-sm text-red-600 dark:text-red-500">{{ $message }}</p>
     @enderror
 
     <!-- HINT -->

@@ -3,7 +3,7 @@
     @if ($label && $position === 'left')
         <label @click="$refs.switchButton.click(); $refs.switchButton.focus()" :id="$id('switch')"
                :class="{ 'text-{{$color}}-600': switchOn, 'text-gray-500': ! switchOn }"
-               class="text-sm select-none"
+               class="text-sm select-none mr-2"
                x-cloak>
             {!! $label !!}
         </label>
