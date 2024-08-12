@@ -56,7 +56,7 @@
                             <div class="truncate" x-show="multiple &amp;&amp; quantity > 0">
                                 <template x-for="(selected, index) in selecteds" :key="index">
                                     <a class="cursor-pointer">
-                                        <div class="inline-flex items-center rounded bg-gray-100 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-200 space-x-1 dark:text-dark-100 dark:bg-dark-700 dark:ring-dark-600">
+                                        <div class="inline-flex items-center rounded bg-gray-100 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-200 space-x-1 dark:text-dark-100 dark:bg-gray-700 dark:ring-dark-600">
                                             <span x-text="selected"></span>
                                             <svg class="h-4 w-4 text-red-500" x-on:click="clear(selected); show = true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                                                 <path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z" clip-rule="evenodd"></path>
@@ -85,7 +85,7 @@
                 <div wire:ignore="" x-show="show" style="display: none;"
                      x-transition:enter="transition ease-out duration-75" x-transition:enter-start="opacity-0 -translate-y-1"
                      x-transition:enter-end="opacity-100" x-anchor.offset.5="$refs.button"
-                     class="absolute mt-1 w-full z-50 rounded overflow-hidden bg-white shadow-lg ring-1 ring-black ring-opacity-5 dark:bg-dark-700"
+                     class="absolute mt-1 w-full z-50 rounded overflow-hidden bg-white shadow-lg ring-1 ring-black ring-opacity-5 dark:bg-gray-700"
                      x-ref="select">
                     <template x-if="searchable">
                         <div class="relative px-2 my-2">
@@ -113,12 +113,12 @@
                             </button>
                         </div>
                     </template>
-                    <ul class="!z-[100] max-h-60 w-full overflow-auto rounded-b text-base soft-scrollbar focus:outline-none sm:text-sm" role="listbox">
+                    <ul class="z-50 max-h-60 w-full overflow-auto rounded-b text-base soft-scrollbar focus:outline-none sm:text-sm" role="listbox">
                         <template x-for="(option, index) in options" :key="index">
                             <li x-on:click="select(option)" x-on:keypress.enter="select(option)"
                                 x-bind:class="{ 'font-semibold hover:text-white font-bold hover:bg-primary-500 dark:hover:bg-blue-500': selected(option) }"
                                 role="option"
-                                class="relative cursor-pointer select-none px-2 py-2 text-gray-700 transition hover:bg-gray-100 dark:text-dark-300 dark:hover:bg-dark-500 focus:outline-none focus:bg-gray-100 dark:focus:bg-dark-500">
+                                class="relative cursor-pointer select-none px-2 py-2 text-gray-700 transition hover:bg-gray-100 dark:text-dark-300 dark:hover:bg-gray-500 focus:outline-none focus:bg-gray-100 dark:focus:bg-gray-500">
                                 <div wire:ignore="" class="flex items-center justify-between">
                                     <span class="ml-2 truncate" x-text="option[selectable.label] ?? option"></span>
                                     <svg x-show="selected(option)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="h-5 w-5 font-bold text-green-500">
