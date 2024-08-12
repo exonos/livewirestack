@@ -85,7 +85,7 @@
                 <div wire:ignore="" x-show="show" style="display: none;"
                      x-transition:enter="transition ease-out duration-75" x-transition:enter-start="opacity-0 -translate-y-1"
                      x-transition:enter-end="opacity-100" x-anchor.offset.5="$refs.button"
-                     class="absolute mt-1 w-full z-50 rounded overflow-hidden bg-white shadow-lg ring-1 ring-black ring-opacity-5 dark:bg-gray-700"
+                     class="relative mt-1 w-full z-50 rounded overflow-hidden bg-white shadow-lg ring-1 ring-black ring-opacity-5 dark:bg-gray-900"
                      x-ref="select">
                     <template x-if="searchable">
                         <div class="relative px-2 my-2">
@@ -113,7 +113,7 @@
                             </button>
                         </div>
                     </template>
-                    <ul class="z-50 max-h-60 w-full overflow-auto rounded-b text-base soft-scrollbar focus:outline-none sm:text-sm" role="listbox">
+                    <ul class="max-h-60 w-full overflow-auto rounded-b text-base soft-scrollbar focus:outline-none sm:text-sm" role="listbox">
                         <template x-for="(option, index) in options" :key="index">
                             <li x-on:click="select(option)" x-on:keypress.enter="select(option)"
                                 x-bind:class="{ 'font-semibold hover:text-white font-bold hover:bg-primary-500 dark:hover:bg-blue-500': selected(option) }"
