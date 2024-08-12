@@ -56,7 +56,7 @@
                             <div class="truncate" x-show="multiple &amp;&amp; quantity > 0">
                                 <template x-for="(selected, index) in selecteds" :key="index">
                                     <a class="cursor-pointer">
-                                        <div class="inline-flex items-center rounded bg-gray-100 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-200 space-x-1 dark:text-gray-100 dark:bg-gray-700 dark:ring-gray-600">
+                                        <div class="inline-flex items-center rounded bg-gray-100 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-200 space-x-1 dark:text-gray-300 dark:bg-gray-700 dark:ring-gray-600">
                                             <span x-text="selected"></span>
                                             <svg class="h-4 w-4 text-red-500" x-on:click="clear(selected); show = true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                                                 <path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z" clip-rule="evenodd"></path>
@@ -120,7 +120,7 @@
                                 role="option"
                                 class="relative cursor-pointer select-none px-2 py-2 text-gray-700 transition hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-500 focus:outline-none focus:bg-gray-100 dark:focus:bg-gray-500">
                                 <div wire:ignore="" class="flex items-center justify-between">
-                                    <span class="ml-2 truncate" x-text="option[selectable.label] ?? option"></span>
+                                    <span class="ml-2 truncate dark:text-gray-300" x-text="option[selectable.label] ?? option"></span>
                                     <svg x-show="selected(option)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="h-5 w-5 font-bold text-green-500">
                                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"></path>
                                     </svg>
