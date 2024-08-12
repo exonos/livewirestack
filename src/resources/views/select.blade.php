@@ -49,14 +49,14 @@
                             </template>
                             <template x-if="empty || (!multiple &amp;&amp; 'Select an option' !== placeholder)">
                                 <span class="truncate" x-bind:class="{
-                                'text-gray-400 dark:text-dark-400': empty,
-                                'text-gray-600 dark:text-dark-300': !empty
+                                'text-gray-400 dark:text-gray-400': empty,
+                                'text-gray-600 dark:text-gray-300': !empty
                               }" x-text="placeholder"></span>
                             </template>
                             <div class="truncate" x-show="multiple &amp;&amp; quantity > 0">
                                 <template x-for="(selected, index) in selecteds" :key="index">
                                     <a class="cursor-pointer">
-                                        <div class="inline-flex items-center rounded bg-gray-100 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-200 space-x-1 dark:text-dark-100 dark:bg-gray-700 dark:ring-dark-600">
+                                        <div class="inline-flex items-center rounded bg-gray-100 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-200 space-x-1 dark:text-gray-100 dark:bg-gray-700 dark:ring-gray-600">
                                             <span x-text="selected"></span>
                                             <svg class="h-4 w-4 text-red-500" x-on:click="clear(selected); show = true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                                                 <path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z" clip-rule="evenodd"></path>
@@ -70,14 +70,14 @@
                     <div class="mr-2 flex items-center">
                         <template x-if="!empty">
                             <button  type="button" x-on:click="clear(); show = true">
-                                <svg class="h-5 w-5 text-secondary-500 dark:text-dark-400 hover:text-red-500 dark:hover:text-red-500"
+                                <svg class="h-5 w-5 text-secondary-500 dark:text-gray-400 hover:text-red-500 dark:hover:text-red-500"
                                      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                                      aria-hidden="true">
                                     <path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z" clip-rule="evenodd"></path>
                                 </svg>
                             </button>
                         </template>
-                        <svg class="h-5 w-5 text-secondary-500 dark:text-dark-400 hover:text-red-500 dark:hover:text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <svg class="h-5 w-5 text-secondary-500 dark:text-gray-400 hover:text-red-500 dark:hover:text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                             <path fill-rule="evenodd" d="M11.47 4.72a.75.75 0 011.06 0l3.75 3.75a.75.75 0 01-1.06 1.06L12 6.31 8.78 9.53a.75.75 0 01-1.06-1.06l3.75-3.75zm-3.75 9.75a.75.75 0 011.06 0L12 17.69l3.22-3.22a.75.75 0 111.06 1.06l-3.75 3.75a.75.75 0 01-1.06 0l-3.75-3.75a.75.75 0 010-1.06z" clip-rule="evenodd"></path>
                         </svg>
                     </div>
@@ -118,7 +118,7 @@
                             <li x-on:click="select(option)" x-on:keypress.enter="select(option)"
                                 x-bind:class="{ 'font-semibold hover:text-white font-bold hover:bg-primary-500 dark:hover:bg-blue-500': selected(option) }"
                                 role="option"
-                                class="relative cursor-pointer select-none px-2 py-2 text-gray-700 transition hover:bg-gray-100 dark:text-dark-300 dark:hover:bg-gray-500 focus:outline-none focus:bg-gray-100 dark:focus:bg-gray-500">
+                                class="relative cursor-pointer select-none px-2 py-2 text-gray-700 transition hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-500 focus:outline-none focus:bg-gray-100 dark:focus:bg-gray-500">
                                 <div wire:ignore="" class="flex items-center justify-between">
                                     <span class="ml-2 truncate" x-text="option[selectable.label] ?? option"></span>
                                     <svg x-show="selected(option)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="h-5 w-5 font-bold text-green-500">
@@ -132,7 +132,7 @@
                                 {{$emptyAction}}
                             @else
                                 <li class="m-2">
-                            <span class="block w-full text-xs text-center pr-2 text-gray-500 dark:text-dark-300">
+                            <span class="block w-full text-xs text-center pr-2 text-gray-500 dark:text-gray-300">
                                 Sin resultados
                             </span>
                                 </li>
