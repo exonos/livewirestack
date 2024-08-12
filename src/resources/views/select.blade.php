@@ -25,7 +25,7 @@
         '{{$attributes->has('placeholder') ? $attributes->whereStartsWith('placeholder')->first() : 'Selecciona una opcion'}}',
         {{$searchable()}},
         true)" class="w-full">
-            <div x-on:click.outside="show = false">
+            <div class="relative" x-on:click.outside="show = false">
                 <button type="button" x-ref="button"
                         {{
                            $attributes
