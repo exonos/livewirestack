@@ -82,11 +82,7 @@
                         </svg>
                     </div>
                 </button>
-                <div wire:ignore="" x-show="show" style="display: none;"
-                     x-transition:enter="transition ease-out duration-75" x-transition:enter-start="opacity-0 -translate-y-1"
-                     x-transition:enter-end="opacity-100" x-anchor.offset.5="$refs.button"
-                     class="relative mt-1 w-full z-50 rounded overflow-hidden bg-white shadow-lg ring-1 ring-black ring-opacity-5 dark:bg-gray-900"
-                     x-ref="select">
+                <div wire:ignore x-cloak x-ref="select" x-show="show" x-on:click.outside="show = false" x-on:keydown.escape.window="show = false" x-intersect:leave="show = false" x-anchor.bottom-end.offset.10="$refs.button" x-transition:enter="transition duration-100 ease-out" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="dark:bg-dark-700 border-dark-200 dark:border-dark-600 absolute z-40 rounded-lg border bg-white w-full overflow-auto">
                     <template x-if="searchable">
                         <div class="relative px-2 my-2">
                             <div>
