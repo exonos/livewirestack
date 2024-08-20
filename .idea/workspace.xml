@@ -4,44 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4e59d021-8b65-49f0-9b71-09f11b0a286d" name="Changes" comment="Fix: issue relative class with password input">
-      <change afterPath="$PROJECT_DIR$/src/Components/Component.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/LivewireModal.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/LivewireSlideOver.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Trix.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Contracts/BehavesAsModal.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Contracts/BehavesAsSlideOver.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Foundation/Base.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Foundation/Modal.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Foundation/SlideOver.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Resolvers/EnumPropertyResolver.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Resolvers/Resolver.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Traits/ComponentTypeDetector.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/js/components/overlay.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/views/livewire/modal.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/views/livewire/slideover.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/views/trix.blade.php" afterDir="false" />
+    <list default="true" id="4e59d021-8b65-49f0-9b71-09f11b0a286d" name="Changes" comment="Fix issues with Slideover livewire">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/livewirestack.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/livewirestack.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/livewirestack.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/livewirestack.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Button.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Button.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LivewireStackServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/LivewireStackServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/css/livewirestack.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/css/livewirestack.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/js/livewirestack.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/js/livewirestack.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/button.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/button.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/datepicker.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/datepicker.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/input.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/input.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/modal.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/modal.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/number.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/number.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/password.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/password.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/phone.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/phone.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/ratio-labels.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/ratio-labels.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/select.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/select.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/sideover.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/sideover.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/tags.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/tags.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/textarea.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/textarea.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/toggle.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/toggle.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -235,7 +200,6 @@
     &quot;RunOnceActivity.laravel-idea.update-module-directories&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/exonhos/PhpstormProjects/livewirestack/src/resources/views&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -262,14 +226,6 @@
       <recent name="$PROJECT_DIR$/src/resources/js" />
       <recent name="$PROJECT_DIR$/src/resources/css/tailwindcss" />
     </key>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PS-241.18034.69" />
-        <option value="bundled-php-predefined-ba97393d7c68-48a1a656d44e-com.jetbrains.php.sharedIndexes-PS-241.18034.69" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -368,9 +324,12 @@
       <workItem from="1723175204029" duration="2860000" />
       <workItem from="1723180166507" duration="1151000" />
       <workItem from="1723225298368" duration="356000" />
-      <workItem from="1723225660612" duration="1127000" />
-      <workItem from="1723476840718" duration="37000" />
-      <workItem from="1723476879517" duration="56000" />
+      <workItem from="1723225660612" duration="1396000" />
+      <workItem from="1723249995191" duration="6000" />
+      <workItem from="1723250008240" duration="5131000" />
+      <workItem from="1723321226271" duration="6643000" />
+      <workItem from="1723436556880" duration="446000" />
+      <workItem from="1724127320719" duration="2289000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <option name="closed" value="true" />
@@ -580,7 +539,23 @@
       <option name="project" value="LOCAL" />
       <updated>1721023626055</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Feature: new livewire components Slideover and Modal">
+      <option name="closed" value="true" />
+      <created>1723226996946</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1723226996946</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Fix issues with some components">
+      <option name="closed" value="true" />
+      <created>1723227024668</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1723227024668</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -593,6 +568,9 @@
     <MESSAGE value="Init" />
     <MESSAGE value="New: Sideover and modal only with alpine" />
     <MESSAGE value="Fix: issue relative class with password input" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix: issue relative class with password input" />
+    <MESSAGE value="Feature: new livewire components Slideover and Modal" />
+    <MESSAGE value="Fix issues with some components" />
+    <MESSAGE value="Fix issues with Slideover livewire" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix issues with Slideover livewire" />
   </component>
 </project>
