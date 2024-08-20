@@ -2,6 +2,7 @@
 
 namespace Exonos\Livewirestack\Foundation;
 
+use Exonos\Livewirestack\Contracts\BehavesAsSlideOver;
 use Livewire\Component;
 use Livewire\Mechanisms\ComponentRegistry;
 use UnexpectedValueException;
@@ -64,7 +65,8 @@ abstract class Base extends Component
     private function guard($componentClass): void
     {
         $requiredInterface = match ($this->determineComponentType()) {
-            'modal' => BehavesAsModal::class
+            'modal' => BehavesAsModal::class,
+            'slide-over' => BehavesAsSlideOver::class,
         };
 
         if (in_array($requiredInterface, class_implements($componentClass), true) === false) {

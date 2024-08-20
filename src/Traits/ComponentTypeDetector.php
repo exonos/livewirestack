@@ -2,6 +2,7 @@
 
 namespace Exonos\Livewirestack\Traits;
 
+use Exonos\Livewirestack\Contracts\BehavesAsSlideOver;
 use Illuminate\Support\Arr;
 use ReflectionClass;
 use UnexpectedValueException;
@@ -29,6 +30,10 @@ trait ComponentTypeDetector
 
         if (in_array(BehavesAsModal::class, $interfaces, true)) {
             return 'modal';
+        }
+
+        if (in_array(BehavesAsSlideOver::class, $interfaces, true)) {
+            return 'slide-over';
         }
 
         throw new UnexpectedValueException('Could not determine component type.');

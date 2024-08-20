@@ -9,6 +9,7 @@
     "production": "mix --production"
   },
   "dependencies": {
+    "@alpinejs/mask": "^3.14.1",
     "@floating-ui/dom": "^1.6.3",
     "@iconify/json": "^2.2.193",
     "@lottiefiles/lottie-interactivity": "^1.6.2",

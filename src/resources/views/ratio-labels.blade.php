@@ -17,7 +17,7 @@
                        value="{{$value["$keyOption"]}}"
                        class="hidden peer" id="{{$uuid.$value["$valueOption"].$value["$keyOption"]}}">
                 <label for="{{$uuid.$value["$valueOption"].$value["$keyOption"]}}" {{$attributes->class([
-                        "relative [&_.custom-option]:scale-100 peer-checked:[&_.custom-option]:scale-0 [&_svg]:scale-0 peer-checked:[&_svg]:scale-100 inline-flex items-center w-full p-3 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-2 peer-checked:bg-blue-50 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700",
+                        "relative [&_.custom-option]:scale-100 peer-checked:[&_.custom-option]:scale-0 [&_svg]:scale-0 peer-checked:[&_svg]:scale-100 inline-flex items-center w-full p-3 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-2 peer-checked:bg-blue-50 dark:peer-checked:bg-blue-900 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700",
                         ' bg-red-50 border-2 border-red-500 text-red-900 focus:ring-red-500 focus:border-red-500 dark:text-red-500 dark:placeholder-red-500 dark:border-red-500' => $errors->has($modelName()),
                     ])}}
                 >
@@ -30,7 +30,7 @@
                         <span class="w-full text-xs ml-2 dark:text-white peer-checked:text-blue-500 font-bold">
                             {{$value["$valueOption"]}}
                             @if(isset($value["hint"]))
-                                <p class="w-full text-xs ml-2 font-normal text-gray-500">{{$value["hint"]}}</p>
+                                <p class="w-full text-xs ml-2 font-normal dark:text-gray-300 text-gray-500">{{$value["hint"]}}</p>
                             @endif
                         </span>
 
@@ -46,7 +46,7 @@
                            value="{{$value["$keyOption"]}}"
                            class="hidden peer" id="{{$uuid.$value["$valueOption"].$value["$keyOption"]}}">
                     <label for="{{$uuid.$value["$valueOption"].$value["$keyOption"]}}"
-                           class="relative [&_.custom-option]:scale-100 peer-checked:[&_.custom-option]:scale-0 [&_svg]:scale-0 peer-checked:[&_svg]:scale-100 inline-flex items-center w-full p-3 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-2 peer-checked:bg-blue-50 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
+                           class="relative [&_.custom-option]:scale-100 peer-checked:[&_.custom-option]:scale-0 [&_svg]:scale-0 peer-checked:[&_svg]:scale-100 inline-flex items-center w-full p-3 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-2 peer-checked:bg-blue-50 dark:peer-checked:bg-blue-700 dark:peer-checked:bg-blue-700 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700 dark:peer-checked:bg-gray-700">
                         <svg aria-hidden="true" class="absolute duration-300 ease-out custom-checkbox w-3 h-3 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
                         </svg>

@@ -1,6 +1,7 @@
 <?php
 
 use Exonos\Livewirestack\Components\Button;
+use Exonos\Livewirestack\Components\Checkbox;
 use Exonos\Livewirestack\Components\DatetimePicker;
 use Exonos\Livewirestack\Components\Dropdown;
 use Exonos\Livewirestack\Components\Editor;
@@ -138,6 +139,7 @@ return [
         'password' => Password::class,
         'input' => Input::class,
         'textarea' => Textarea::class,
+        'checkbox' => Checkbox::class,
         'select' => Select::class,
         'tags' => Tags::class,
         'number' => Number::class,

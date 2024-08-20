@@ -3,6 +3,7 @@ namespace Exonos\Livewirestack;
 
 use App\Extensions\Forms\Components\TextInput;
 use Exonos\Livewirestack\Foundation\Modal;
+use Exonos\Livewirestack\Foundation\SlideOver;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 use Livewire\Livewire;
@@ -71,5 +72,6 @@ class LivewireStackServiceProvider extends ServiceProvider
     protected function registerLivewireComponents()
     {
         Livewire::component('modal', Modal::class);
+        Livewire::component('slide-over', SlideOver::class);
     }
 }

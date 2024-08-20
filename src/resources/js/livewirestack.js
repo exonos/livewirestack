@@ -3,6 +3,7 @@ import fileUpload from './components/file';
 import tags from './components/tags';
 import toastBase from './components/toast-base.js';
 import toastLoop from './components/toast-loop.js';
+import mask from '@alpinejs/mask'
 import number from './components/number';
 import './components/overlay';
 import pincode from './components/pincode.js';
@@ -24,6 +25,7 @@ document.addEventListener('alpine:init', () => {
     window.Alpine.data('create', create);
     window.Alpine.data('create', create);
     window.Alpine.plugin(AlpineFloatingUI);
-    window.lottie = lottie
-    window.create = create
+    window.lottie = lottie;
+    window.create = create;
+    window.Alpine.plugin(mask);
 });
