@@ -10,7 +10,7 @@
          x-transition:leave="transition ease-out duration-300"
          x-transition:leave-start="opacity-100 scale-100"
          x-transition:leave-end="opacity-0 scale-90"
-         class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 p-4 bg-white rounded-lg max-w-[70%]"
+         class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 bg-white rounded-lg max-w-[70%]"
          @click.away="closeConfirm()">
         <div class="p-8">
             <div class="flex items-start">
@@ -31,11 +31,11 @@
 
         <div class="flex items-center flex-wrap space-x-5 py-5 px-8 justify-end bg-white dark:bg-stone-800 border-t border-t-stone-200 dark:border-t-stone-700">
             <button @click="closeConfirm()" type="button" class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">
-                Light
+                No
             </button>
 
             <button  @click="yesConfirm()" type="button" class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">
-                Red
+                Yes
             </button>
         </div>
     </div>
