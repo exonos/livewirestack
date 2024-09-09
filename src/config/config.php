@@ -2,6 +2,7 @@
 
 use Exonos\Livewirestack\Components\Button;
 use Exonos\Livewirestack\Components\Checkbox;
+use Exonos\Livewirestack\Components\Confirmation;
 use Exonos\Livewirestack\Components\DatetimePicker;
 use Exonos\Livewirestack\Components\Dropdown;
 use Exonos\Livewirestack\Components\Editor;
@@ -158,6 +159,7 @@ return [
         'popover' => Popover::class,
         'tooltip' => Tooltip::class,
         'notification' => NotificationBase::class,
+        'confirmation' => Confirmation::class,
         'sideover' => Sideover::class,
         'trix' => Trix::class,
     ],
