@@ -15,7 +15,7 @@
     <div {{$attributes->class(['flex' => $append || $prepend])}}>
         <!-- PREPEND -->
         @if($prepend)
-            <span  class="inline-flex items-center px-3 text-xs text-gray-500 bg-gray-100 border rounded-l border-gray-200 dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
+            <span  class="inline-flex items-center text-xs text-gray-500 bg-transparent border-transparent rounded-l dark:text-gray-400">
                 {{ $prepend }}
             </span>
         @endif
@@ -43,7 +43,7 @@
         </div>
         <!-- APPEND -->
         @if($append)
-            <span class="inline-flex items-center px-3 text-xs text-gray-500 bg-gray-100 border rounded-r border-gray-200 dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
+            <span class="inline-flex items-center text-xs text-gray-500 rounded-r bg-transparent border-transparent">
                 {{ $append }}
             </span>
         @endif
