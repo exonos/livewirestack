@@ -1,13 +1,14 @@
 document.addEventListener('alpine:init', () => {
-    Alpine.directive('confirmable', (el, {expression}, {evaluate}) => {
+    Alpine.directive('confirmable', (el, { expression }, { evaluate }) => {
         // Extrae parámetros opcionales de la expresión
         let params = expression.split(',').map(param => param.trim());
         let title = params[0] || 'Are you sure?';
         let message = params[1] || 'Are you sure you want to proceed?';
-        let callback = params[2] ? new Function('return ' + params[2])() : () => {
-        };
-        let cancel = params[3] ? new Function('return ' + params[3])() : () => {
-        };
+        let callbackStr = params[2] || '() => {}';
+        let cancelStr = params[3] || '() => {}';
+
+        let callback = new Function('return ' + callbackStr)();
+        let cancel = new Function('return ' + cancelStr)();
 
         el.addEventListener('click', async () => {
             let result = await new Promise(resolve => {
@@ -17,11 +18,11 @@ document.addEventListener('alpine:init', () => {
                         message: message,
                         callback: () => {
                             resolve(true);
-                            callback();
+                            callback.call(el.__x); // Llama al callback en el contexto de Alpine
                         },
                         cancel: () => {
                             resolve(false);
-                            cancel();
+                            cancel.call(el.__x); // Llama al cancel en el contexto de Alpine
                         }
                     }
                 }));
