@@ -2,15 +2,26 @@ document.addEventListener('alpine:init', () => {
     Alpine.directive('confirmable', (el, { expression }, { evaluate, cleanup }) => {
         let isClickable = true;
 
-        // Parsear la expresión de la directiva
+        // Función para analizar la expresión de la directiva
         const parseExpression = (expr) => {
-            const regex = /([^,]+)(?:,\s([^,]*))?(?:,\s([^,]*))?(?:,\s([^,]*))?/;
+            const regex = /^([^,]+)(?:,\s([^,]*))?(?:,\s([^,]*))?(?:,\s([^,]*))?$/;
             const match = expr.match(regex);
+
+            // Asegúrate de que `match` no sea nulo
+            if (!match) {
+                return {
+                    title: 'Are you sure?',
+                    message: 'Do you want to proceed?',
+                    callback: () => {},
+                    cancel: () => {}
+                };
+            }
+
             return {
-                title: match[1]?.trim() || 'Are you sure?',
-                message: match[2]?.trim() || 'Do you want to proceed?',
-                callback: match[3] ? () => eval(match[3]) : () => {},
-                cancel: match[4] ? () => eval(match[4]) : () => {}
+                title: match[1] ? match[1].trim() : 'Are you sure?',
+                message: match[2] ? match[2].trim() : 'Do you want to proceed?',
+                callback: match[3] ? new Function('return ' + match[3])() : () => {},
+                cancel: match[4] ? new Function('return ' + match[4])() : () => {}
             };
         };
 
