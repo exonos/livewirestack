@@ -11,18 +11,19 @@ abstract class Component extends BaseComponent
     use Validation;
     public function __construct(
         public ?string $property = null,
-        public ?bool $required = false,
         public string|null|ComponentSlot $corner = null,
         public ?string $id = null,
         public ?string $type = 'text',
         public ?string $placeholder = null,
+        public ?string $variant = null,
         public ?string $hint = null,
         public ?string $prefix = null,
-        public ?string $width = 'md',
+        public ?string $size = null,
         public string|null|ComponentSlot $append = null,
         public string|null|ComponentSlot $prepend = null,
         public string|null|ComponentSlot $suffix = null,
         public string|null|ComponentSlot $label = null,
+        public string|null|ComponentSlot $description = null,
         public ?array $data = []
     )
     {
@@ -33,19 +34,31 @@ abstract class Component extends BaseComponent
 
     public function getWidth()
     {
-        if ($this->attributes->has('width'))
+        if ($this->attributes->has('size'))
         {
-            $this->width = $this->attributes->whereStartsWith('width')->first();
+            $this->size = $this->attributes->whereStartsWith('size')->first();
         }
 
         return [
             'sm' => 'p-2 text-xs',
             'md' => 'p-2.5 text-sm',
             'lg' => 'p-3 text-md',
-        ][$this->width ?? 'md'];
+        ][$this->size ?? 'md'];
     }
 
+    public function getVariant()
+    {
+        if ($this->attributes->has('variant'))
+        {
+            $this->variant = $this->attributes->whereStartsWith('variant')->first();
+        }
 
+        return [
+            'default' => 'bg-transparent',
+            'flat' => 'bg-gray-100 border-none ring-transparent ring-none border-transparent',
+            'filled' => 'bg-gray-50 hover:border-gray-200 dark:border-gray-600'
+        ][$this->variant ?? 'flat'];
+    }
 
     /**
      * Definicio de los parametros del builder

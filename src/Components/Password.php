@@ -4,30 +4,17 @@ namespace Exonos\Livewirestack\Components;
 
 use Closure;
 use Illuminate\Contracts\View\View;
-use Illuminate\View\Component;
+use Exonos\Livewirestack\Components\Builder\Component;
 
 class Password extends Component
 {
-    public string $uuid;
+    public function __construct()
+    {
+        parent::__construct();
 
-    public function __construct(
-        public ?string $label = null,
-        public ?string $icon = null,
-        public ?string $iconRight = null,
-        public ?string $hint = null,
-        public ?string $prefix = null,
-        public ?string $suffix = null,
-        public ?bool $inline = false,
-        public ?bool $money = false,
-        public ?string $locale = 'en-US',
-
-        // Slots
-        public mixed $prepend = null,
-        public mixed $append = null
-    ) {
-        $this->uuid = md5(serialize($this));
+        $this->size = config('livewirestack.theme.password.size', 'sm');
+        $this->variant = config('livewirestack.theme.password.theme', 'flat');
     }
-
     public function modelName(): ?string
     {
         if ($this->attributes->has('wire:model'))

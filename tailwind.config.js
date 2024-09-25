@@ -15,10 +15,12 @@ module.exports = {
         extend: {
             colors: {
                 blue: colors.blue,
-                primary: colors.blue,
                 secondary: colors.slate,
+                gray: colors.gray,
                 dark: colors.slate,
-                black: {
+                red: colors.red,
+                yellow: colors.yellow,
+                primary: {
                     'DEFAULT': colors.black,
                     '50': '#f6f6f6',
                     '100': '#e7e7e7',
@@ -72,6 +74,8 @@ module.exports = {
         'sm:max-w-md md:max-w-xl lg:max-w-3xl xl:max-w-5xl',
         'sm:max-w-md md:max-w-xl lg:max-w-3xl xl:max-w-5xl 2xl:max-w-6xl',
         'sm:max-w-md md:max-w-xl lg:max-w-3xl xl:max-w-5xl 2xl:max-w-7xl',
+
+        'focus-within:ring-primary focus-within:ring-2'
     ],
     plugins: [
         require('@tailwindcss/forms'),customScrollbar, softScrollbar, numberAppearanceNone
