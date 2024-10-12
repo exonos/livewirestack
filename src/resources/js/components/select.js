@@ -38,6 +38,7 @@ export default (
         common: common,
         response: [],
         async init() {
+
             if (this.model === undefined) {
                 return error('The [wire:model] is undefined');
             }
@@ -365,19 +366,34 @@ export default (
          * @returns {Array}
          */
         get options() {
-            const availables = this.common ? options : this.response;
+            // Elegimos las opciones disponibles (común o respuesta)
+            let availables = this.common ? options : this.response;
 
+            // Verificamos que `availables` sea un arreglo, en caso contrario, inicializamos uno vacío
+            if (!Array.isArray(availables)) {
+                try {
+                    availables = JSON.parse(sanitizeJSON(JSON.stringify(availables)));
+                } catch (e) {
+                    console.error("Error al procesar las opciones JSON:", e);
+                    availables = [];
+                }
+            }
+
+            // Si no hay búsqueda, regresamos todas las opciones disponibles
             if (this.search === '') {
                 return availables;
             }
 
             const search = this.search.toLowerCase();
 
+            // Filtramos las opciones
             return availables.filter((option) => {
-                return dimensional ?
-                    option[selectable.label].toString().toLowerCase().indexOf(search) !== -1 :
-                    option.toString().toLowerCase().indexOf(search) !== -1;
+                if (this.dimensional && option.hasOwnProperty(selectable.label)) {
+                    return option[selectable.label].toString().toLowerCase().includes(search);
+                } else {
+                    return option.toString().toLowerCase().includes(search);
+                }
             });
-        },
+        }
     })
 };
