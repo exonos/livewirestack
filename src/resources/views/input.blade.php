@@ -17,7 +17,7 @@
             @endif
         </div>
     @endif
-    @if($description)
+    @if(isset($description))
         <p class="text-sm mb-1 text-gray-500 dark:text-white/60">
             {{ $description }}
         </p>
