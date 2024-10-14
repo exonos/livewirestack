@@ -15,8 +15,8 @@ import './components/directives/confirmable';
 import pincode from './components/pincode.js';
 import { create } from '@lottiefiles/lottie-interactivity';
 import lottie from 'lottie-web'
-import './globals/globals';
-import './components/rich-text';
+//import './globals/globals';
+//import './components/rich-text';
 import AlpineFloatingUI from "./alpine/FloatingUI/index";
 import hideScrollbar from "./tailwindcss/plugins/hideScrollbar.js";
 
@@ -31,10 +31,8 @@ document.addEventListener('alpine:init', () => {
     window.Alpine.data('ui_pincode', pincode);
     window.Alpine.data('lottie', lottie);
     window.Alpine.data('create', create);
-    window.Alpine.data('create', create);
     window.Alpine.plugin(AlpineFloatingUI);
-    window.Alpine.plugin(hideScrollbar);
+    //window.Alpine.plugin(hideScrollbar);
     window.lottie = lottie;
-    window.create = create;
     window.Alpine.plugin(mask);
 });
