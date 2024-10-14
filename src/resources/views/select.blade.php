@@ -1,9 +1,21 @@
 <div>
     <!-- STANDARD LABEL -->
     @if($label)
-        <label class="block font-normal dark:text-white text-xs text-gray-600 mb-1" for="">
-            {{ $label }}
-        </label>
+        <div class="flex justify-between items-end">
+            <label class="font-medium text-sm select-none text-gray-800 dark:text-white" for="{{ $id }}">
+                {{ $label }}
+
+                @if($attributes->has('required'))
+                    <span class="font-extrabold text-red-500">*</span>
+                @endif
+            </label>
+
+            @if($corner !== null)
+                <label for="{{ $id }}" class="block text-xs font-medium disabled:opacity-60 text-gray-500 dark:text-gray-400 invalidated:text-negative-600 dark:invalidated:text-negative-700">
+                    {{$corner}}
+                </label>
+            @endif
+        </div>
     @endif
     <div {{$attributes->class([
     'flex' => $append || $prepend,
@@ -35,8 +47,8 @@
                                 (!$prepend && $append) ? 'rounded-l border-r-0' : '',
                                 ($prepend && $append) ? 'rounded-l-none border-r-0 rounded-r-none border-l-0' : '',
                                 (!$prepend && !$append) ? 'rounded bg-gray-50' : '',
-                               'bg-gray-50 flex border '.$getWidth().' border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500',
-                               'border border-dashed pointer-events-none' => $attributes->has('readonly') && $attributes->get('readonly') == true,
+                               "$getVariant() disabled:opacity-50 dark:disabled:opacity-75 disabled:cursor-default disabled:pointer-events-none flex focus-within:ring-primary focus-within:ring-1 focus-within:border-gray-300 items-center border border-gray-200 dark:border-gray-600 w-full overflow-hidden dark:placeholder-gray-400 dark:placeholder-gray-400 dark:text-white hover:bg-gray-100 dark:bg-gray-700",
+                                'border border-dashed pointer-events-none' => $attributes->has('readonly') && $attributes->get('readonly') == true,
                                'bg-red-50 border-red-500 text-red-900 placeholder-red-400 focus:ring-red-500 focus:border-red-500 dark:text-red-500 dark:placeholder-red-500 dark:border-red-500' => $errors->has($modelName())
                                ])
                         }}

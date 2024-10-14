@@ -15,6 +15,7 @@ class Toggle extends Component
     public string $uuid;
     public function __construct(
         public string|null|ComponentSlot $label = null,
+        public string|null|ComponentSlot $description = null,
         public ?string $md = null,
         public ?string $lg = null,
         public string $size = 'lg',

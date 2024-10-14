@@ -1,3 +1,4 @@
+
 <div x-data="{ switchOn: {{$entangle()}}, size: '{{$size}}'}" class="flex items-center">
     <input id="{{$uuid}}" type="checkbox" name="switch" class="hidden" :checked="switchOn">
     @if ($label && $position === 'left')
@@ -33,9 +34,14 @@
     @if ($label && $position === 'right')
         <label @click="$refs.switchButton.click(); $refs.switchButton.focus()" :id="$id('switch')"
                :class="{ 'text-{{$color}}-600': switchOn, 'text-gray-500': ! switchOn }"
-               class="@if($size === 'lg') text-sm @else text-xs @endif select-none ml-2"
+               class="@if($size === 'lg') text-sm @else text-xs @endif select-none ml-2 font-semibold"
                x-cloak>
             {!! $label !!}
+            @if(isset($description))
+                <p class="font-normal text-gray-400 dark:text-gray-600 @if($size === 'lg') text-sm @else text-xs @endif">
+                    {!! $description !!}
+                </p>
+            @endif
         </label>
     @endif
 </div>
