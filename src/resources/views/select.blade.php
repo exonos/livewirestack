@@ -47,7 +47,7 @@
                                 (!$prepend && $append) ? 'rounded-l border-r-0' : '',
                                 ($prepend && $append) ? 'rounded-l-none border-r-0 rounded-r-none border-l-0' : '',
                                 (!$prepend && !$append) ? 'rounded bg-gray-50' : '',
-                               "$getVariant() disabled:opacity-50 dark:disabled:opacity-75 disabled:cursor-default disabled:pointer-events-none flex focus-within:ring-primary focus-within:ring-1 focus-within:border-gray-300 items-center border border-gray-200 dark:border-gray-600 w-full overflow-hidden dark:placeholder-gray-400 dark:placeholder-gray-400 dark:text-white hover:bg-gray-100 dark:bg-gray-700",
+                               "$getVariant $getWidth disabled:opacity-50 dark:disabled:opacity-75 disabled:cursor-default disabled:pointer-events-none flex focus-within:ring-primary focus-within:ring-1 focus-within:border-gray-300 items-center border border-gray-200 dark:border-gray-600 w-full overflow-hidden dark:placeholder-gray-400 dark:placeholder-gray-400 dark:text-white hover:bg-gray-100 dark:bg-gray-700",
                                 'border border-dashed pointer-events-none' => $attributes->has('readonly') && $attributes->get('readonly') == true,
                                'bg-red-50 border-red-500 text-red-900 placeholder-red-400 focus:ring-red-500 focus:border-red-500 dark:text-red-500 dark:placeholder-red-500 dark:border-red-500' => $errors->has($modelName())
                                ])
