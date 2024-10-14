@@ -126,7 +126,7 @@
                             <li x-on:click="select(option)" x-on:keypress.enter="select(option)"
                                 x-bind:class="{ 'font-semibold hover:font-bold hover:bg-gray-100 dark:hover:bg-gray-500': selected(option) }"
                                 role="option"
-                                class="relative cursor-pointer select-none px-2 py-2 text-gray-700 transition hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-500 focus:outline-none focus:bg-gray-100 dark:focus:bg-gray-500">
+                                class="relative cursor-pointer select-none px-2 py-2 text-gray-700 transition hover:bg-gray-50 dark:text-gray-300 dark:hover:bg-gray-500 focus:outline-none focus:bg-gray-100 dark:focus:bg-gray-500">
                                 <div wire:ignore="" class="flex items-center justify-between">
                                     <span class="ml-2 truncate dark:text-gray-300" x-text="option[selectable.label] ?? option"></span>
                                     <svg x-show="selected(option)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="h-5 w-5 font-bold text-green-500">
