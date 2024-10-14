@@ -124,7 +124,7 @@
                     <ul class="max-h-60 w-full overflow-auto rounded-b text-base soft-scrollbar focus:outline-none sm:text-sm" role="listbox">
                         <template x-for="(option, index) in options" :key="index">
                             <li x-on:click="select(option)" x-on:keypress.enter="select(option)"
-                                x-bind:class="{ 'font-semibold hover:text-white font-bold hover:bg-primary-500 dark:hover:bg-blue-500': selected(option) }"
+                                x-bind:class="{ 'font-semibold hover:font-bold hover:bg-gray-100 dark:hover:bg-gray-500': selected(option) }"
                                 role="option"
                                 class="relative cursor-pointer select-none px-2 py-2 text-gray-700 transition hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-500 focus:outline-none focus:bg-gray-100 dark:focus:bg-gray-500">
                                 <div wire:ignore="" class="flex items-center justify-between">
