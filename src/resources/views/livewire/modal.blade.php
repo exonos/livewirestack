@@ -30,7 +30,7 @@
                  class="livewirestack-modal-content">
                 @foreach($components as $id => $component)
                     <div @click.outside="closeIf('close-on-backdrop-click')" x-show.immediate="activeComponent === '{{ $id }}'" x-ref="{{ $id }}" wire:key="{{ $id }}">
-                        @livewire($component['name'], $component['arguments'], key({{$id}}))
+                        @livewire($component['name'], $component['arguments'], key($id))
                     </div>
                 @endforeach
             </div>
