@@ -1,5 +1,4 @@
 <div>
-    <!-- STANDARD LABEL -->
     @if($label)
         <div class="flex justify-between items-end">
             <label class="font-medium text-sm select-none text-gray-800 dark:text-white" for="{{ $id }}">
@@ -18,12 +17,11 @@
         </div>
     @endif
     @if(isset($description))
-        <p class="text-sm mb-1 text-gray-500 dark:text-white/60">
+        <p class="text-sm mb-1 m-0 text-gray-500 dark:text-white/60">
             {{ $description }}
         </p>
     @endif
     <div {{$attributes->class(['flex w-full relative block group' => $append || $prepend])}}>
-        <!-- PREPEND -->
         @if($prepend)
             <span class="inline-flex items-center text-xs text-gray-500 bg-transparent border-transparent rounded-l dark:text-gray-400">
                 {{ $prepend }}
@@ -36,6 +34,7 @@
                 (!$prepend && !$append) ? 'rounded' : '',
                 "$getVariant() disabled:opacity-50 dark:disabled:opacity-75 disabled:cursor-default disabled:pointer-events-none flex focus-within:ring-primary focus-within:ring-1 focus-within:border-gray-300 items-center border border-gray-200 dark:border-gray-600 w-full overflow-hidden dark:placeholder-gray-400 dark:placeholder-gray-400 dark:text-white hover:bg-gray-100 dark:bg-gray-700",
                 'border-2 border-dashed focus:border-none' => $attributes->has('readonly'),
+                'cursor-none' => $attributes->has('disabled'),
                 'bg-danger-50 border-danger-500 text-danger-900 placeholder-danger-500 focus:ring-danger-500 focus:border-danger-500' => $errors->has($modelName()),
             ])}}
         >
@@ -51,19 +50,17 @@
                     <span class="inset-y-0 start-0 flex placeholder-gray-50 items-center text-gray-500 mr-2">{{ $suffix }}</span>
                 @endif
         </div>
-        <!-- APPEND -->
+
         @if($append)
             <span class="inline-flex items-center text-xs text-gray-500 rounded-r bg-transparent border-transparent">
                 {{ $append }}
             </span>
         @endif
     </div>
-    <!-- ERROR -->
     @error($modelName())
     <p class="mt-0.5 text-xs text-danger-600 dark:text-danger-500">{{ $message }}</p>
     @enderror
 
-    <!-- HINT -->
     @if($hint)
         <p class="block mt-0.5 text-gray-500 italic text-sm">
             {{ $hint }}

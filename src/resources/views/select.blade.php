@@ -1,5 +1,4 @@
 <div>
-    <!-- STANDARD LABEL -->
     @if($label)
         <div class="flex justify-between items-end">
             <label class="font-medium text-sm select-none text-gray-800 dark:text-white" for="{{ $id }}">
@@ -18,10 +17,9 @@
         </div>
     @endif
     <div {{$attributes->class([
-    'flex' => $append || $prepend,
+    'flex w-full relative block group/input' => $append || $prepend,
     'border border-transparent'
     ])}}>
-        <!-- PREPEND -->
         @if($prepend)
             <span  class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border rounded-l border-gray-300 dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
                 {{ $prepend }}
@@ -150,7 +148,6 @@
                 </div>
             </div>
         </div>
-        <!-- APPEND -->
         @if($append)
             <span class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border rounded-r border-gray-300 dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
                 {{ $append }}
