@@ -6,7 +6,7 @@
                 {{ $label }}
 
                 @if($attributes->has('required'))
-                    <span class="font-extrabold text-red-500">*</span>
+                    <span class="font-extrabold text-danger-500">*</span>
                 @endif
             </label>
 
@@ -49,7 +49,7 @@
                                 (!$prepend && !$append) ? 'rounded' : '',
                                "$getVariant $getWidth disabled:opacity-50 dark:disabled:opacity-75 disabled:cursor-default disabled:pointer-events-none flex focus-within:ring-primary focus-within:ring-1 focus-within:border-gray-300 items-center border border-gray-200 dark:border-gray-600 w-full overflow-hidden dark:placeholder-gray-400 dark:placeholder-gray-400 dark:text-white hover:bg-gray-100 dark:bg-gray-700",
                                 'border border-dashed pointer-events-none' => $attributes->has('readonly') && $attributes->get('readonly') == true,
-                               'bg-red-50 border-red-500 text-red-900 placeholder-red-400 focus:ring-red-500 focus:border-red-500 dark:text-red-500 dark:placeholder-red-500 dark:border-red-500' => $errors->has($modelName())
+                               'bg-danger-50 border-danger-500 text-danger-900 placeholder-danger-400 focus:ring-danger-500 focus:border-danger-500 dark:text-danger-500 dark:placeholder-danger-500 dark:border-danger-500' => $errors->has($modelName())
                                ])
                         }}
                         x-on:click="show = !show" aria-haspopup="listbox" aria-expanded="false">
@@ -70,7 +70,7 @@
                                     <a class="cursor-pointer">
                                         <div class="inline-flex items-center rounded bg-gray-100 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-200 space-x-1 dark:text-gray-300 dark:bg-gray-700 dark:ring-gray-600">
                                             <span x-text="selected"></span>
-                                            <svg class="h-4 w-4 text-red-500" x-on:click="clear(selected); show = true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                            <svg class="h-4 w-4 text-danger-500" x-on:click="clear(selected); show = true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                                                 <path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z" clip-rule="evenodd"></path>
                                             </svg>
                                         </div>
@@ -82,14 +82,14 @@
                     <div class="mr-2 flex items-center">
                         <template x-if="!empty">
                             <button  type="button" x-on:click="clear(); show = true">
-                                <svg class="h-5 w-5 text-secondary-500 dark:text-gray-400 hover:text-red-500 dark:hover:text-red-500"
+                                <svg class="h-5 w-5 text-secondary-500 dark:text-gray-400 hover:text-danger-500 dark:hover:text-danger-500"
                                      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                                      aria-hidden="true">
                                     <path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z" clip-rule="evenodd"></path>
                                 </svg>
                             </button>
                         </template>
-                        <svg class="h-5 w-5 text-secondary-500 dark:text-gray-400 hover:text-red-500 dark:hover:text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <svg class="h-5 w-5 text-secondary-500 dark:text-gray-400 hover:text-danger-500 dark:hover:text-danger-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                             <path fill-rule="evenodd" d="M11.47 4.72a.75.75 0 011.06 0l3.75 3.75a.75.75 0 01-1.06 1.06L12 6.31 8.78 9.53a.75.75 0 01-1.06-1.06l3.75-3.75zm-3.75 9.75a.75.75 0 011.06 0L12 17.69l3.22-3.22a.75.75 0 111.06 1.06l-3.75 3.75a.75.75 0 01-1.06 0l-3.75-3.75a.75.75 0 010-1.06z" clip-rule="evenodd"></path>
                         </svg>
                     </div>
@@ -111,7 +111,7 @@
                             </div>
                             <button type="button" class="absolute inset-y-0 right-2 flex cursor-pointer items-center px-2"
                                     x-on:click="search = ''; $refs.search.focus();" x-show="search.length > 0">
-                                <svg class="h-5 w-5 transition text-secondary-500 hover:text-red-500"
+                                <svg class="h-5 w-5 transition text-secondary-500 hover:text-danger-500"
                                      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                                      aria-hidden="true">
                                     <path fill-rule="evenodd"
@@ -158,7 +158,7 @@
         @endif
     </div>
     @error($modelName())
-    <p class="mt-1 text-sm text-red-600 dark:text-red-500">{{ $message }}</p>
+    <p class="mt-1 text-sm text-danger-600 dark:text-danger-500">{{ $message }}</p>
     @enderror
     @if($hint)
         <p class="block mt-1 text-gray-500 text-xs">

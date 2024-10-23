@@ -61,7 +61,7 @@ export default (length = 4, onlyCheckOnLastFieldInput = true) => {
                 feedback.innerHTML = "";
                 this.$wire.nextStep();
             } else {
-                feedback.innerHTML = "<span wire:ignore class='text-red-500 font-extrabold'>Codigo incorrecto!</span>";
+                feedback.innerHTML = "<span wire:ignore class='text-danger-500 font-extrabold'>Codigo incorrecto!</span>";
             }
         }
     })

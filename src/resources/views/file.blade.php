@@ -120,7 +120,7 @@
     @if ($mode === 'attachment')
         {{-- Loading indicator for file remove --}}
         <div wire:loading.delay wire:loading.flex wire:target="removeUpload" wire:loading.class="w-full">
-            <div class="text-sm text-red-500 bg-red-100 flex-1 p-1 text-center rounded">
+            <div class="text-sm text-danger-500 bg-danger-100 flex-1 p-1 text-center rounded">
                 Removing file...
             </div>
         </div>
@@ -147,7 +147,7 @@
                             @if ($multiple)
                                 {{-- prints attachment.* --}}
                                 @error($attributes->wire('model')->value . '.'. $key)
-                                <p class="text-sm text-red-600" class="mb-2">{{ $message }}</p>
+                                <p class="text-sm text-danger-600" class="mb-2">{{ $message }}</p>
                                 @enderror
                             @endif
 
@@ -162,7 +162,7 @@
                                 wire:key="remove-attachment-{{ $f->getFilename() }}"
                                 wire:loading.attr="disabled"
                                 type="button"
-                                x-on:click.prevent="$wire.removeUpload('{{ $attributes->wire('model')->value }}', '{{ $f->getFilename() }}')" class="text-xs text-red-500 appearance-none hover:underline">
+                                x-on:click.prevent="$wire.removeUpload('{{ $attributes->wire('model')->value }}', '{{ $f->getFilename() }}')" class="text-xs text-danger-500 appearance-none hover:underline">
                                 Remove
                             </button>
                         </div>
@@ -187,7 +187,7 @@
                         <div>
 
                             @error($attributes->wire('model')->value)
-                            <p class="text-sm text-red-600" class="mb-2">{{ $message }}</p>
+                            <p class="text-sm text-danger-600" class="mb-2">{{ $message }}</p>
                             @enderror
 
                             <div class="text-sm font-medium truncate w-40 md:w-auto">{{ $file->getClientOriginalName() }}</div>
@@ -199,7 +199,7 @@
                             <button
                                 wire:loading.attr="disabled"
                                 type="button"
-                                x-on:click.prevent="$wire.removeUpload('{{ $attributes->wire('model')->value }}', '{{ $file->getFilename() }}')" class="text-xs text-red-500 appearance-none hover:underline">
+                                x-on:click.prevent="$wire.removeUpload('{{ $attributes->wire('model')->value }}', '{{ $file->getFilename() }}')" class="text-xs text-danger-500 appearance-none hover:underline">
                                 Remove
                             </button>
                         </div>

@@ -18,7 +18,7 @@
                        class="hidden peer" id="{{$uuid.$value["$valueOption"].$value["$keyOption"]}}">
                 <label for="{{$uuid.$value["$valueOption"].$value["$keyOption"]}}" {{$attributes->class([
                         "relative [&_.custom-option]:scale-100 peer-checked:[&_.custom-option]:scale-0 [&_svg]:scale-0 peer-checked:[&_svg]:scale-100 inline-flex items-center w-full p-3 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-2 peer-checked:bg-blue-50 dark:peer-checked:bg-blue-900 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700",
-                        ' bg-red-50 border-2 border-red-500 text-red-900 focus:ring-red-500 focus:border-red-500 dark:text-red-500 dark:placeholder-red-500 dark:border-red-500' => $errors->has($modelName()),
+                        ' bg-danger-50 border-2 border-danger-500 text-danger-900 focus:ring-danger-500 focus:border-danger-500 dark:text-danger-500 dark:placeholder-danger-500 dark:border-danger-500' => $errors->has($modelName()),
                     ])}}
                 >
                     <svg aria-hidden="true" class="absolute duration-300 ease-out custom-checkbox w-3 h-3 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -97,6 +97,6 @@
 
         <!-- ERROR -->
         @error($modelName())
-        <p class="mt-1 text-sm text-red-600 dark:text-red-500">{{ $message }}</p>
+        <p class="mt-1 text-sm text-danger-600 dark:text-danger-500">{{ $message }}</p>
         @enderror
 </div>

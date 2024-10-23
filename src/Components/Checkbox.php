@@ -27,7 +27,7 @@ class Checkbox extends Component
     {
         $colors = [
             'primary' => 'text-primary focus:ring-primary dark:focus:ring-primary',
-            'danger' => 'text-red-500 focus:ring-red-500 dark:focus:ring-red-600',
+            'danger' => 'text-danger-500 focus:ring-danger-500 dark:focus:ring-danger-600',
             'info' => 'text-blue-600 focus:ring-blue-500 dark:focus:ring-blue-600',
             'black' => 'text-black focus:ring-black dark:focus:ring-black',
             'green' => 'text-green-600 focus:ring-green-500 dark:focus:ring-green-600',

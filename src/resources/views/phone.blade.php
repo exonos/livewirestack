@@ -8,7 +8,7 @@
     <div {{$attributes->class([
                 'flex bg-gray-50 items-center dark:border-gray-700 border rounded-md my-2 border-gray-200 w-full focus-within:ring-1 focus-within:ring-blue-500 focus-within:border-blue-500 overflow-hidden dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white',
                 'border-dashed' => $attributes->has('readonly'),
-                'bg-red-50 border-red-500 text-red-900 placeholder-red-400 focus:ring-red-500 focus:border-red-500 dark:text-red-500 dark:placeholder-red-500 dark:border-red-500' => $errors->has($modelName()),
+                'bg-danger-50 border-danger-500 text-danger-900 placeholder-danger-400 focus:ring-danger-500 focus:border-danger-500 dark:text-danger-500 dark:placeholder-danger-500 dark:border-danger-500' => $errors->has($modelName()),
             ])}}>
         <input
                 x-data="{ value: null, input: null}"
@@ -42,7 +42,7 @@
     </div>
     <!-- ERROR -->
     @error($modelName())
-    <p class="mt-1 text-sm text-red-600 dark:text-red-500">{{ $message }}</p>
+    <p class="mt-1 text-sm text-danger-600 dark:text-danger-500">{{ $message }}</p>
     @enderror
 
     <!-- HINT -->

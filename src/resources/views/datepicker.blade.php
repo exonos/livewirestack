@@ -116,7 +116,7 @@
                              ->class([
                                  'bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 disabled:cursor-not-allowed disabled:opacity-50',
                                  'border border-dashed' => $attributes->has('readonly') && $attributes->get('readonly') == true,
-                                 'bg-red-50 border-red-500 text-red-900 placeholder-red-400 focus:ring-red-500 focus:border-red-500 dark:text-red-500 dark:placeholder-red-500 dark:border-red-500' => $errors->has($modelName())
+                                 'bg-danger-50 border-danger-500 text-danger-900 placeholder-danger-400 focus:ring-danger-500 focus:border-danger-500 dark:text-danger-500 dark:placeholder-danger-500 dark:border-danger-500' => $errors->has($modelName())
                                 ])
                             }}
                         id="{{ $uuid }}"
@@ -178,7 +178,7 @@
                     </p>
                 @endif
                 @error($modelName())
-                <p class="mt-1 text-sm text-red-600 dark:text-red-500">{{ $message }}</p>
+                <p class="mt-1 text-sm text-danger-600 dark:text-danger-500">{{ $message }}</p>
                 @enderror
             </div>
         </div>

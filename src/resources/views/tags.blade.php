@@ -37,7 +37,7 @@
     </div>
     <!-- ERROR -->
     @error($modelName())
-    <p class="mt-1 text-sm text-red-600 dark:text-red-500">{{ $message }}</p>
+    <p class="mt-1 text-sm text-danger-600 dark:text-danger-500">{{ $message }}</p>
     @enderror
 </div>
 <script>

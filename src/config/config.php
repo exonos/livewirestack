@@ -89,7 +89,7 @@ return [
                 'default' => 'black',
                 'primary' => 'text-white bg-primary-700 hover:bg-primary-800 border-transparent dark:bg-primary-600 dark:hover:bg-primary-700',
                 'transparent' => 'text-gray-500 bg-transparent',
-                'danger' => 'text-white bg-red-500 hover:bg-red-700 dark:bg-red-600 dark:hover:bg-red-700',
+                'danger' => 'text-white bg-danger-500 hover:bg-danger-700 dark:bg-danger-600 dark:hover:bg-danger-700',
                 'info' => 'text-white bg-blue-600 hover:bg-blue-700',
                 'black' => 'text-white bg-gray-800 hover:bg-gray-900 dark:bg-gray-800 dark:hover:bg-gray-700 dark:border-gray-700',
                 'green' => 'text-white bg-green-700 hover:bg-green-800 dark:bg-green-600 dark:hover:bg-green-700',

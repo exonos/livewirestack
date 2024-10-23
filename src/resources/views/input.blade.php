@@ -6,7 +6,7 @@
                 {{ $label }}
 
                 @if($attributes->has('required'))
-                    <span class="font-extrabold text-red-500">*</span>
+                    <span class="font-extrabold text-danger-500">*</span>
                 @endif
             </label>
 
@@ -36,7 +36,7 @@
                 (!$prepend && !$append) ? 'rounded' : '',
                 "$getVariant() disabled:opacity-50 dark:disabled:opacity-75 disabled:cursor-default disabled:pointer-events-none flex focus-within:ring-primary focus-within:ring-1 focus-within:border-gray-300 items-center border border-gray-200 dark:border-gray-600 w-full overflow-hidden dark:placeholder-gray-400 dark:placeholder-gray-400 dark:text-white hover:bg-gray-100 dark:bg-gray-700",
                 'border-2 border-dashed focus:border-none' => $attributes->has('readonly'),
-                'bg-red-50 border-red-500 text-red-900 placeholder-red-500 focus:ring-red-500 focus:border-red-500' => $errors->has($modelName()),
+                'bg-danger-50 border-danger-500 text-danger-900 placeholder-danger-500 focus:ring-danger-500 focus:border-danger-500' => $errors->has($modelName()),
             ])}}
         >
             @if($prefix)
@@ -60,7 +60,7 @@
     </div>
     <!-- ERROR -->
     @error($modelName())
-    <p class="mt-0.5 text-xs text-red-600 dark:text-red-500">{{ $message }}</p>
+    <p class="mt-0.5 text-xs text-danger-600 dark:text-danger-500">{{ $message }}</p>
     @enderror
 
     <!-- HINT -->
