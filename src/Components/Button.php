@@ -29,7 +29,7 @@ class Button extends Component
     public function getColor()
     {
         $default = 'font-medium';
-        $colors = config('livewirestack.theme.button.variant_classes', 'sm');
+        $colors = config('livewirestack.theme.button.variant_classes', 'default');
 
         foreach ($colors as $key => $class) {
             if ($this->attributes->has($key)) {
