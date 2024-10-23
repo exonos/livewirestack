@@ -1,7 +1,4 @@
 let colors = require('tailwindcss/colors');
-const customScrollbar = require('./src/resources/js/tailwindcss/plugins/customScrollbar');
-const softScrollbar = require('./src/resources/js/tailwindcss/plugins/softScrollbar');
-const numberAppearanceNone = require('./src/resources/js/tailwindcss/plugins/numberAppearanceNone');
 
 
 module.exports = {
@@ -78,6 +75,6 @@ module.exports = {
         'focus-within:ring-primary focus-within:ring-2'
     ],
     plugins: [
-        require('@tailwindcss/forms'),customScrollbar, softScrollbar, numberAppearanceNone
+        require('@tailwindcss/forms')
     ],
 };
