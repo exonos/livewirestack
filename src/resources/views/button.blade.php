@@ -1,7 +1,8 @@
-<button id="{{ $uuid }}"
-   wire:loading.class="opacity-50 pointer-events-none"
-   wire:loading.attr="disabled"
-   {{$attributes->merge(['class' => 'inline-flex items-center justify-center gap-2 transition-colors focus:outline-none text-base rounded '.$getColor(). ' '.$getSize()])}}
->
-    {{$slot}}
+<button id="{{ $uuid }}" wire:loading.attr="data-loading" {{$attributes->merge(['class' => 'relative [&[data-loading]]:pointer-events-none transition-colors rounded '.$getColor(). ' '.$getSize()])}}>
+    <div class="[[data-loading]>&]:opacity-0 transition-opacity inline-flex items-center">
+        {{$slot}}
+    </div>
+    <div class="[[data-loading]>&]:opacity-100 opacity-0 absolute inset-0 justify-center inline-flex items-center">
+        <span class="loading loading-dots loading-lg"></span>
+    </div>
 </button>

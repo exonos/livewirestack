@@ -210,6 +210,7 @@ return [
                     '5xl' => 'max-w-5xl',
                     '6xl' => 'max-w-6xl',
                     '7xl' => 'max-w-7xl',
+                    'fullscreen' => 'fullscreen',
                 ],
             ],
         ]
