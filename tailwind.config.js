@@ -53,6 +53,8 @@ module.exports = {
         },
         '!overflow-hidden',
         'z-0',
+        'bg-opacity-10',
+        'backdrop-blur-sm',
         'z-10',
         'z-20',
         'z-30',
@@ -82,7 +84,6 @@ module.exports = {
         'sm:max-w-md md:max-w-xl lg:max-w-3xl xl:max-w-5xl',
         'sm:max-w-md md:max-w-xl lg:max-w-3xl xl:max-w-5xl 2xl:max-w-6xl',
         'sm:max-w-md md:max-w-xl lg:max-w-3xl xl:max-w-5xl 2xl:max-w-7xl',
-
         'focus-within:ring-primary focus-within:ring-2'
     ],
     plugins: [
