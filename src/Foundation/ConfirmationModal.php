@@ -2,7 +2,9 @@
 
 namespace Exonos\Livewirestack\Foundation;
 
-class ConfirmationModal extends Modal
+use Exonos\Livewirestack\Components\LivewireModal;
+
+class ConfirmationModal extends LivewireModal
 {
     public mixed $callbackComponent;
 
