@@ -80,6 +80,13 @@ class ConfirmationModal extends LivewireModal
         call_user_func_array([$this, 'close'], $this->modalCloseArguments);
     }
 
+    public function cancel()
+    {
+        $this->dispatch('actionCancelled')->to($this->callbackComponent);
+
+        call_user_func_array([$this, 'close'], $this->modalCloseArguments);
+    }
+
     public function render()
     {
         return view('livewirestack::livewire.confirmation');

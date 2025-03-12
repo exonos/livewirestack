@@ -1,6 +1,6 @@
 <div>
     <form wire:submit="confirm">
-        <div class="space-y-6 my-6">
+        <div class="space-y-6 my-6 py-3">
             <div class="px-4">
                 <div class="absolute top-0 right-0 hidden pt-4 pr-4 sm:block">
                     <button type="button" wire:click="$dispatch('modal.close')" class="rounded-md bg-white text-gray-400 hover:text-gray-500 focus:outline-hidden focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
@@ -12,7 +12,7 @@
                 </div>
                 <div class="mt-3 text-center sm:mt-0 sm:text-left">
                     <h3 class="text-lg font-medium leading-6 text-gray-900">{{ $prompt['title'] }}</h3>
-                    <div class="mt-2">
+                    <div class="mt-2 text-center">
                         <p class="text-sm text-gray-500">{{ $prompt['message'] }}</p>
                     </div>
                 </div>
@@ -46,7 +46,7 @@
             @endif
 
             @if($confirmPhrase)
-                <div class="px-4 sm:px-6">
+                <div class="px-4 sm:px-6 pt-2">
                     <input type="text" id="confirm-phrase" wire:model.defer="confirmPhraseInput" class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 block w-full p-2.5" placeholder="{{ __("wire-elements-pro::modal.confirmation.please_enter_phrase_to_continue", ['phrase' => $confirmPhrase]) }}" required>
 
                     @error('confirmPhraseInput')
@@ -56,12 +56,12 @@
             @endif
         </div>
 
-        <div class="flex flex-row justify-end px-6 py-4 bg-gray-100 dark:bg-gray-800 text-end">
+        <div class="flex flex-row justify-end px-3 py-2 bg-gray-100 dark:bg-gray-800 text-end">
             <div class="flex justify-between w-full">
-                <button type="button" wire:click="$dispatch('modal.close')" class="text-gray-900 bg-white border border-gray-300 focus:outline-hidden hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mb-2" wire:loading.attr="disabled">
+                <button type="button" wire:click="cancel" class="text-gray-900 bg-white border border-gray-300 focus:outline-hidden hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-md text-xs px-5 py-1.5" wire:loading.attr="disabled">
                     {{ $prompt['cancel'] }}
                 </button>
-                <button type="submit" class="text-white bg-indigo-700 hover:bg-indigo-800 focus:ring-4 focus:ring-indigo-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 focus:outline-hidden" wire:loading.attr="disabled">
+                <button type="submit" class="text-white bg-gray-900 hover:bg-gray-800 font-medium rounded-md text-xs px-5 py-1.5 focus:outline-hidden" wire:loading.attr="disabled">
                     {{ $prompt['confirm'] }}
                 </button>
             </div>
