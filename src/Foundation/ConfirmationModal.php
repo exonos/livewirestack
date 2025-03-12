@@ -43,6 +43,20 @@ class ConfirmationModal extends LivewireModal
         $this->modalCloseArguments = $modalCloseArguments;
     }
 
+    public static function behavior(): array
+    {
+        return [
+            // Close the modal if the escape key is pressed
+            'close-on-escape' => false,
+            // Close the modal if someone clicks outside the modal
+            'close-on-backdrop-click' => false,
+            // Trap the users focus inside the modal (e.g. input autofocus and going back and forth between input fields)
+            'trap-focus' => true,
+            // Remove all unsaved changes once someone closes the modal
+            'remove-state-on-close' => false,
+        ];
+    }
+
     public function getMessages()
     {
         return [
