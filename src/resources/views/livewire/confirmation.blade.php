@@ -1,4 +1,4 @@
-<x-modal name="confirms-action" size="2xl" non-fixed>
+<div>
     <form wire:submit="confirm">
         <div class="space-y-6 my-6">
             <div class="px-4">
@@ -67,4 +67,4 @@
             </div>
         </div>
     </form>
-</x-modal>
+</div>
