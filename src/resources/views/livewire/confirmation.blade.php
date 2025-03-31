@@ -1,10 +1,10 @@
-<div>
+<div class="fixed inset-0 z-50 overflow-y-auto" style="display: none;">
     <form wire:submit="confirm">
         <div class="space-y-6 my-6 py-3">
             <div class="px-4">
                 <div class="absolute top-0 right-0 hidden pt-4 pr-4 sm:block">
                     <button type="button" wire:click="$dispatch('modal.close')" class="rounded-md bg-white text-gray-400 hover:text-gray-500 focus:outline-hidden focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
-                        <span class="sr-only">{{ __('wire-elements-pro::modal.confirmation.close') }}</span>
+                        <span class="sr-only">Cerrar</span>
                         <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                         </svg>
