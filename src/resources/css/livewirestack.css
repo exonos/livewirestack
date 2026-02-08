@@ -74,7 +74,7 @@
 
 .livewirestack-modal-backdrop,
 .livewirestack-slide-over-backdrop {
-    @apply fixed inset-0 bg-opacity-25 bg-gray-500 backdrop-blur transition-opacity;
+    @apply fixed inset-0 opacity-25 bg-gray-500 backdrop-blur transition-opacity;
 }
 
 .livewirestack-modal-content {
